@@ -13,6 +13,14 @@
 		DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE74343220D55A400A73247 /* HockeyWithMe.xcdatamodeld */; };
 		DDE74347220D55A800A73247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE74346220D55A800A73247 /* Assets.xcassets */; };
 		DDE7434A220D55A800A73247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE74348220D55A800A73247 /* LaunchScreen.storyboard */; };
+		DDE74356220D5B0700A73247 /* ServerServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */; };
+		DDE74358221148A000A73247 /* GetJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74357221148A000A73247 /* GetJSON.swift */; };
+		DDE7435B22114EE500A73247 /* GameResultStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7435A22114EE500A73247 /* GameResultStruct.swift */; };
+		DDE74365221E800300A73247 /* ListOfGamesResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */; };
+		DDE74367221E819500A73247 /* ListOfGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74366221E819500A73247 /* ListOfGameView.swift */; };
+		DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */; };
+		DDE7436C2227B60300A73247 /* CreatListOfGameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7436B2227B60300A73247 /* CreatListOfGameResults.swift */; };
+		DDE7436E2227B66F00A73247 /* ListOfGameResultExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		DDE74346220D55A800A73247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE74349220D55A800A73247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE7434B220D55A800A73247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceProtocols.swift; sourceTree = "<group>"; };
+		DDE74357221148A000A73247 /* GetJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetJSON.swift; sourceTree = "<group>"; };
+		DDE7435A22114EE500A73247 /* GameResultStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultStruct.swift; sourceTree = "<group>"; };
+		DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGamesResultsCell.swift; sourceTree = "<group>"; };
+		DDE74366221E819500A73247 /* ListOfGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameView.swift; sourceTree = "<group>"; };
+		DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultsViewProtocol.swift; sourceTree = "<group>"; };
+		DDE7436B2227B60300A73247 /* CreatListOfGameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatListOfGameResults.swift; sourceTree = "<group>"; };
+		DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultExtansions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,103 @@
 		DDE7433B220D55A400A73247 /* HockeyWithMe */ = {
 			isa = PBXGroup;
 			children = (
+				DDE74352220D592D00A73247 /* ServerService */,
+				DDE74351220D583500A73247 /* ListOfGamesResult */,
 				DDE7433C220D55A400A73247 /* AppDelegate.swift */,
-				DDE7433E220D55A400A73247 /* ViewController.swift */,
-				DDE74340220D55A400A73247 /* Main.storyboard */,
 				DDE74346220D55A800A73247 /* Assets.xcassets */,
 				DDE74348220D55A800A73247 /* LaunchScreen.storyboard */,
 				DDE7434B220D55A800A73247 /* Info.plist */,
 				DDE74343220D55A400A73247 /* HockeyWithMe.xcdatamodeld */,
 			);
 			path = HockeyWithMe;
+			sourceTree = "<group>";
+		};
+		DDE74351220D583500A73247 /* ListOfGamesResult */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74360221A82EF00A73247 /* Controller */,
+				DDE7435F221A82D800A73247 /* View */,
+				DDE7435E221A82C200A73247 /* Model */,
+				DDE74368221FCA1F00A73247 /* Protocols */,
+				DDE74363221E777900A73247 /* Extansions */,
+			);
+			path = ListOfGamesResult;
+			sourceTree = "<group>";
+		};
+		DDE74352220D592D00A73247 /* ServerService */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74353220D596300A73247 /* ServerServiceProtocols */,
+				DDE74354220D59A600A73247 /* ServerServiceModules */,
+				DDE7435922114E3B00A73247 /* ServerServiceStructs */,
+			);
+			path = ServerService;
+			sourceTree = "<group>";
+		};
+		DDE74353220D596300A73247 /* ServerServiceProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */,
+			);
+			path = ServerServiceProtocols;
+			sourceTree = "<group>";
+		};
+		DDE74354220D59A600A73247 /* ServerServiceModules */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74357221148A000A73247 /* GetJSON.swift */,
+			);
+			path = ServerServiceModules;
+			sourceTree = "<group>";
+		};
+		DDE7435922114E3B00A73247 /* ServerServiceStructs */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7435A22114EE500A73247 /* GameResultStruct.swift */,
+			);
+			path = ServerServiceStructs;
+			sourceTree = "<group>";
+		};
+		DDE7435E221A82C200A73247 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7436B2227B60300A73247 /* CreatListOfGameResults.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DDE7435F221A82D800A73247 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74340220D55A400A73247 /* Main.storyboard */,
+				DDE74366221E819500A73247 /* ListOfGameView.swift */,
+				DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDE74360221A82EF00A73247 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7433E220D55A400A73247 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDE74363221E777900A73247 /* Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */,
+			);
+			path = Extansions;
+			sourceTree = "<group>";
+		};
+		DDE74368221FCA1F00A73247 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +242,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE74356220D5B0700A73247 /* ServerServiceProtocols.swift in Sources */,
+				DDE74365221E800300A73247 /* ListOfGamesResultsCell.swift in Sources */,
 				DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */,
 				DDE7433F220D55A400A73247 /* ViewController.swift in Sources */,
 				DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */,
+				DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */,
+				DDE74367221E819500A73247 /* ListOfGameView.swift in Sources */,
+				DDE74358221148A000A73247 /* GetJSON.swift in Sources */,
+				DDE7435B22114EE500A73247 /* GameResultStruct.swift in Sources */,
+				DDE7436C2227B60300A73247 /* CreatListOfGameResults.swift in Sources */,
+				DDE7436E2227B66F00A73247 /* ListOfGameResultExtansions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
