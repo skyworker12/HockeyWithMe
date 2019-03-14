@@ -191,22 +191,85 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GD-gU-SMI">
                                 <rect key="frame" x="0.0" y="263" width="320" height="305"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V5-qL-auH">
-                                        <rect key="frame" x="271" y="5" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="icons8-отмена-50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V5-qL-auH">
+                                        <rect key="frame" x="8" y="0.0" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cQB-Pu-f8f"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="icons8-горизонтальная-линия-filled-100"/>
+                                        <connections>
+                                            <action selector="closeOptionsView:" destination="xwW-Dl-0Hi" eventType="touchUpInside" id="8Zt-wi-AFC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-0D-v9l">
-                                        <rect key="frame" x="8" y="267" width="304" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Поиск">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата с " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idS-cV-qb0">
+                                        <rect key="frame" x="8" y="38" width="140" height="30"/>
+                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="A5X-G2-Rrd"/>
+                                            <constraint firstAttribute="width" constant="140" id="xqA-O6-VOL"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
+                                        <rect key="frame" x="172" y="38" width="140" height="30"/>
+                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5jd-l8-mGs"/>
+                                            <constraint firstAttribute="width" constant="140" id="UcJ-gB-ii5"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-Qn-FDf">
+                                        <rect key="frame" x="8" y="95" width="304" height="156"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="574285328.14517295">
+                                            <!--2019-03-14 19:42:08 +0000-->
+                                        </date>
+                                        <date key="minimumDate" timeIntervalSinceReferenceDate="-3502787417">
+                                            <!--1890-01-01 11:29:43 +0000-->
+                                        </date>
+                                        <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                            <!--2037-12-31 11:00:00 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-0D-v9l">
+                                        <rect key="frame" x="8" y="259" width="304" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="sQX-el-b2t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Показать результаты">
+                                            <color key="titleColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="searchResults:" destination="xwW-Dl-0Hi" eventType="touchUpInside" id="Q0K-de-igr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="idS-cV-qb0" secondAttribute="bottom" constant="27" id="03U-pp-wrk"/>
+                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="27" id="0FK-17-3Nv"/>
+                                    <constraint firstItem="1V5-qL-auH" firstAttribute="top" secondItem="4GD-gU-SMI" secondAttribute="top" id="GsH-Th-hz0"/>
+                                    <constraint firstItem="Adg-sR-Ugt" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="Igg-dW-Xz2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="8" id="LWd-Sh-IcY"/>
+                                    <constraint firstItem="idS-cV-qb0" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="QjA-SC-8Nk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1V5-qL-auH" secondAttribute="trailing" constant="8" id="Rdd-WR-2to"/>
+                                    <constraint firstAttribute="bottom" secondItem="pY8-0D-v9l" secondAttribute="bottom" constant="16" id="bGh-ie-oXu"/>
+                                    <constraint firstItem="idS-cV-qb0" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="e6j-Ad-ry8"/>
+                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="top" secondItem="dCj-Qn-FDf" secondAttribute="bottom" constant="8" id="iL1-jG-4pt"/>
+                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="oV7-Yf-I4e"/>
+                                    <constraint firstAttribute="trailing" secondItem="dCj-Qn-FDf" secondAttribute="trailing" constant="8" id="oqC-4V-3nQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="pY8-0D-v9l" secondAttribute="trailing" constant="8" id="p7j-Fm-hYg"/>
+                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="xmE-ZR-G3x"/>
+                                    <constraint firstItem="1V5-qL-auH" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="yWW-qu-oCc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,7 +281,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rNp-9p-ACH"/>
                         <connections>
+                            <outlet property="datePicker" destination="dCj-Qn-FDf" id="XA7-6g-dyc"/>
                             <outlet property="optionsView" destination="4GD-gU-SMI" id="f3c-ZG-8QC"/>
+                            <outlet property="searchResultsButton" destination="pY8-0D-v9l" id="4FL-Vc-bZD"/>
                         </connections>
                     </view>
                     <connections>
@@ -231,8 +296,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-горизонтальная-линия-filled-100" width="75" height="75"/>
         <image name="icons8-меню-50" width="37.5" height="37.5"/>
-        <image name="icons8-отмена-50" width="37.5" height="37.5"/>
         <image name="icons8-промежуток-дат-50" width="37.5" height="37.5"/>
     </resources>
 </document>

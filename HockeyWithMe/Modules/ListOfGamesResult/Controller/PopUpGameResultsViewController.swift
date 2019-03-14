@@ -24,5 +24,11 @@ class PopUpGameResultsViewController: UIViewController {
             self.popUpGameResultsView.animHide()
         }
     }
+    
+    @IBAction func searchResults(_ sender: Any) {
+    }
+    @IBAction func closeOptionsView(_ sender: Any) {
+        self.popUpGameResultsView.animHide()
+    }
 }
 

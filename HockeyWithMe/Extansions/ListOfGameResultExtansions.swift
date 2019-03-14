@@ -25,8 +25,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func viewLayout(){
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "164377574-hockey-wallpapers")!)
-        self.view.contentMode = .scaleToFill
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nyu-dzhersi-devilz-new-jersey")!)
+         self.view.contentMode = .center
         self.listOfGameResultsView.listOfGameResultsTableView?.backgroundColor = UIColor.clear
     }
 }
