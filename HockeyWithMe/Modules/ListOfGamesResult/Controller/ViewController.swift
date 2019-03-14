@@ -26,9 +26,11 @@ class ViewController: UIViewController {
     @IBOutlet var listOfGameResultsView: ListOfGameView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewLayout()
         
         self.listOfGameResultsView.listOfGameResultsTableView?.delegate = self
         self.listOfGameResultsView.listOfGameResultsTableView?.dataSource = self
+        
         createListOfResults.creatListOfGame(completion: {(data, error) in
             if error != nil{
                 self.downloadError = error
@@ -37,5 +39,14 @@ class ViewController: UIViewController {
                 print(self.listOfGameResultArray)
             }
         })
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    @IBAction func showOptions(_ sender: Any) {
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopUpGameResultsViewController
+        self.addChild(popUpVC)
+        popUpVC.view.frame = self.view.frame
+        self.view.addSubview(popUpVC.view)
     }
 }

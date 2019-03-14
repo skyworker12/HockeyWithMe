@@ -17,7 +17,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
        let cell = tableView.dequeueReusableCell(withIdentifier: "GoToFullGameInfo") as! ListOfGamesResultsCell
        //cell.awayTeamLabel.text = listOfGameResultArray[indexPath.row].awayTeamName
         cell.fillingCell(arrayWithData: [listOfGameResultArray[indexPath.row]])
+        cell.backgroundColor = UIColor.clear
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         return cell
+    }
+    
+    func viewLayout(){
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "164377574-hockey-wallpapers")!)
+        self.view.contentMode = .scaleToFill
+        self.listOfGameResultsView.listOfGameResultsTableView?.backgroundColor = UIColor.clear
     }
 }
 extension ListOfGamesResultsCell{
