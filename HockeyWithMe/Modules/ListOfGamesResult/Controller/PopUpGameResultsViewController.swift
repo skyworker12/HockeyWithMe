@@ -10,25 +10,36 @@ import UIKit
 
 class PopUpGameResultsViewController: UIViewController {
     
-    @IBOutlet var popUpGameResultsView: PopUpGamesResultsView!
+    @IBOutlet weak var popUpGameResultsView: PopUpGamesResultsView?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.popUpGameResultsView.moveIn()
+        print("popUpGameResultsView did load")
+        self.popUpGameResultsView!.moveIn()
 
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        self.willMove(toParent: nil)
+        self.view.removeFromSuperview()
+        self.removeFromParent()
     }
     //MARK: методы появления и скрытия pop up
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch? = touches.first
-        if touch?.view != self.popUpGameResultsView.optionsView{
+        if touch?.view != self.popUpGameResultsView!.optionsView{
             //moveOut()
-            self.popUpGameResultsView.animHide()
+            self.popUpGameResultsView!.animHide()
         }
     }
     
     @IBAction func searchResults(_ sender: Any) {
     }
     @IBAction func closeOptionsView(_ sender: Any) {
-        self.popUpGameResultsView.animHide()
+        self.popUpGameResultsView!.animHide()
+    }
+    
+    deinit {
+        print("removed from the memory")
     }
 }
 

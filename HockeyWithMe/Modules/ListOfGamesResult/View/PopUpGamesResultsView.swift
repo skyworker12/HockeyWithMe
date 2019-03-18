@@ -12,6 +12,7 @@ class PopUpGamesResultsView: UIView {
     @IBOutlet weak var optionsView: UIView!
     @IBOutlet weak var searchResultsButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var optionsSegmentController: UISegmentedControl!
     func moveIn(){
         self.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         self.optionsView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.90)

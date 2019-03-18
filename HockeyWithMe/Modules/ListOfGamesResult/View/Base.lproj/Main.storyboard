@@ -189,7 +189,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4GD-gU-SMI">
-                                <rect key="frame" x="0.0" y="263" width="320" height="305"/>
+                                <rect key="frame" x="0.0" y="163" width="320" height="405"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V5-qL-auH">
                                         <rect key="frame" x="8" y="0.0" width="304" height="30"/>
@@ -225,8 +225,9 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-Qn-FDf">
-                                        <rect key="frame" x="8" y="95" width="304" height="156"/>
+                                        <rect key="frame" x="8" y="111" width="304" height="216"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="574285328.14517295">
                                             <!--2019-03-14 19:42:08 +0000-->
                                         </date>
@@ -238,7 +239,7 @@
                                         </date>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-0D-v9l">
-                                        <rect key="frame" x="8" y="259" width="304" height="30"/>
+                                        <rect key="frame" x="8" y="350" width="304" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="sQX-el-b2t"/>
@@ -251,19 +252,34 @@
                                             <action selector="searchResults:" destination="xwW-Dl-0Hi" eventType="touchUpInside" id="Q0K-de-igr"/>
                                         </connections>
                                     </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TzI-J3-PZ4">
+                                        <rect key="frame" x="8" y="76" width="304" height="29"/>
+                                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="bQH-bS-RIn"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Дата с "/>
+                                            <segment title="Дата по"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="idS-cV-qb0" secondAttribute="bottom" constant="27" id="03U-pp-wrk"/>
-                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="27" id="0FK-17-3Nv"/>
+                                    <constraint firstItem="TzI-J3-PZ4" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="1kP-0F-RSy"/>
+                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="TzI-J3-PZ4" secondAttribute="bottom" constant="7" id="FwZ-nz-W2K"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="top" secondItem="4GD-gU-SMI" secondAttribute="top" id="GsH-Th-hz0"/>
                                     <constraint firstItem="Adg-sR-Ugt" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="Igg-dW-Xz2"/>
                                     <constraint firstAttribute="trailing" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="8" id="LWd-Sh-IcY"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="QjA-SC-8Nk"/>
+                                    <constraint firstAttribute="trailing" secondItem="TzI-J3-PZ4" secondAttribute="trailing" constant="8" id="RDr-il-cap"/>
+                                    <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="idS-cV-qb0" secondAttribute="bottom" constant="8" id="RMp-Ln-1Iz"/>
                                     <constraint firstAttribute="trailing" secondItem="1V5-qL-auH" secondAttribute="trailing" constant="8" id="Rdd-WR-2to"/>
-                                    <constraint firstAttribute="bottom" secondItem="pY8-0D-v9l" secondAttribute="bottom" constant="16" id="bGh-ie-oXu"/>
+                                    <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="8" id="V7W-1T-q2v"/>
+                                    <constraint firstAttribute="bottom" secondItem="pY8-0D-v9l" secondAttribute="bottom" constant="25" id="bGh-ie-oXu"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="e6j-Ad-ry8"/>
-                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="top" secondItem="dCj-Qn-FDf" secondAttribute="bottom" constant="8" id="iL1-jG-4pt"/>
+                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="top" secondItem="dCj-Qn-FDf" secondAttribute="bottom" constant="23" id="iL1-jG-4pt"/>
                                     <constraint firstItem="dCj-Qn-FDf" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="oV7-Yf-I4e"/>
                                     <constraint firstAttribute="trailing" secondItem="dCj-Qn-FDf" secondAttribute="trailing" constant="8" id="oqC-4V-3nQ"/>
                                     <constraint firstAttribute="trailing" secondItem="pY8-0D-v9l" secondAttribute="trailing" constant="8" id="p7j-Fm-hYg"/>
@@ -274,7 +290,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="4GD-gU-SMI" firstAttribute="top" secondItem="rNp-9p-ACH" secondAttribute="top" constant="243" id="HXJ-ZO-qHT"/>
+                            <constraint firstItem="4GD-gU-SMI" firstAttribute="top" secondItem="rNp-9p-ACH" secondAttribute="top" constant="143" id="HXJ-ZO-qHT"/>
                             <constraint firstItem="4GD-gU-SMI" firstAttribute="leading" secondItem="Ga5-Dw-hkd" secondAttribute="leading" id="Tbg-Tc-vI4"/>
                             <constraint firstAttribute="trailing" secondItem="4GD-gU-SMI" secondAttribute="trailing" id="lrt-PH-Eqy"/>
                             <constraint firstItem="4GD-gU-SMI" firstAttribute="bottom" secondItem="rNp-9p-ACH" secondAttribute="bottom" id="ysy-fP-BrJ"/>
@@ -282,6 +298,7 @@
                         <viewLayoutGuide key="safeArea" id="rNp-9p-ACH"/>
                         <connections>
                             <outlet property="datePicker" destination="dCj-Qn-FDf" id="XA7-6g-dyc"/>
+                            <outlet property="optionsSegmentController" destination="TzI-J3-PZ4" id="DQz-6p-Zvm"/>
                             <outlet property="optionsView" destination="4GD-gU-SMI" id="f3c-ZG-8QC"/>
                             <outlet property="searchResultsButton" destination="pY8-0D-v9l" id="4FL-Vc-bZD"/>
                         </connections>

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         didSet{
             //print(self.listOfGameResultArray)
             DispatchQueue.main.async{
-                self.listOfGameResultsView.listOfGameResultsTableView?.reloadData()
+                self.listOfGameResultsView!.listOfGameResultsTableView?.reloadData()
             }
         }
     }
@@ -23,15 +23,15 @@ class ViewController: UIViewController {
             print("Ошибка при загрузке")
         }
     }
-    @IBOutlet var listOfGameResultsView: ListOfGameView!
+    @IBOutlet weak var listOfGameResultsView: ListOfGameView?
     override func viewDidLoad() {
         super.viewDidLoad()
         viewLayout()
         
-        self.listOfGameResultsView.listOfGameResultsTableView?.delegate = self
-        self.listOfGameResultsView.listOfGameResultsTableView?.dataSource = self
+        self.listOfGameResultsView!.listOfGameResultsTableView?.delegate = self
+        self.listOfGameResultsView!.listOfGameResultsTableView?.dataSource = self
         
-        createListOfResults.creatListOfGame(completion: {(data, error) in
+        createListOfResults.creatListOfGame(completion: {[unowned self](data, error) in
             if error != nil{
                 self.downloadError = error
             }else{
@@ -42,11 +42,13 @@ class ViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        print("ViewController will Appear")
     }
     @IBAction func showOptions(_ sender: Any) {
-        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as! PopUpGameResultsViewController
-        self.addChild(popUpVC)
-        popUpVC.view.frame = self.view.frame
-        self.view.addSubview(popUpVC.view)
+        let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as? PopUpGameResultsViewController
+        self.addChild(popUpVC!)
+        popUpVC!.view.frame = self.view.frame
+        self.view.addSubview(popUpVC!.view)
+        popUpVC!.didMove(toParent: self)
     }
 }

@@ -27,7 +27,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func viewLayout(){
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nyu-dzhersi-devilz-new-jersey")!)
          self.view.contentMode = .center
-        self.listOfGameResultsView.listOfGameResultsTableView?.backgroundColor = UIColor.clear
+        self.listOfGameResultsView?.listOfGameResultsTableView?.backgroundColor = UIColor.clear
     }
 }
 extension ListOfGamesResultsCell{
@@ -37,7 +37,6 @@ extension ListOfGamesResultsCell{
         self.awayTeamScoreLabel.text = String(arrayWithData[0].awayTeamScore)
         self.homeTeamScoreLabel.text = String(arrayWithData[0].homeTeamScore)
         self.gameStatusLabel.text = arrayWithData[0].gameStatus
-        //self.gameDateLabel.text = arrayWithData[0].gameDate.replacingOccurrences(of: "T", with: " ", options: .literal, range: nil)
         self.gameDateLabel.text = dateFormatter(date: arrayWithData[0].gameDate)
         
     }
