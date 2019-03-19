@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */; };
 		DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433C220D55A400A73247 /* AppDelegate.swift */; };
 		DDE7433F220D55A400A73247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433E220D55A400A73247 /* ViewController.swift */; };
 		DDE74342220D55A400A73247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE74340220D55A400A73247 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGameResultsViewControllerExtansions.swift; sourceTree = "<group>"; };
 		DDE74339220D55A400A73247 /* HockeyWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7433C220D55A400A73247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDE7433E220D55A400A73247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DDE44630224037D9002A409E /* Global Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE743CE223A22FE00A73247 /* UiViewExtansion.swift */,
+			);
+			path = "Global Extansions";
+			sourceTree = "<group>";
+		};
 		DDE74330220D55A400A73247 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +91,7 @@
 				DDE743CD223A227A00A73247 /* Modules */,
 				DDE74352220D592D00A73247 /* ServerService */,
 				DDE74368221FCA1F00A73247 /* Protocols */,
-				DDE74363221E777900A73247 /* Extansions */,
+				DDE44630224037D9002A409E /* Global Extansions */,
 				DDE7433C220D55A400A73247 /* AppDelegate.swift */,
 				DDE74346220D55A800A73247 /* Assets.xcassets */,
 				DDE74348220D55A800A73247 /* LaunchScreen.storyboard */,
@@ -97,6 +107,7 @@
 				DDE74360221A82EF00A73247 /* Controller */,
 				DDE7435F221A82D800A73247 /* View */,
 				DDE7435E221A82C200A73247 /* Model */,
+				DDE74363221E777900A73247 /* Extansions */,
 			);
 			path = ListOfGamesResult;
 			sourceTree = "<group>";
@@ -167,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */,
-				DDE743CE223A22FE00A73247 /* UiViewExtansion.swift */,
+				DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */,
 			);
 			path = Extansions;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */,
 				DDE7433F220D55A400A73247 /* ViewController.swift in Sources */,
 				DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */,
+				DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift in Sources */,
 				DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */,
 				DDE743CF223A22FE00A73247 /* UiViewExtansion.swift in Sources */,
 				DDE74367221E819500A73247 /* ListOfGameView.swift in Sources */,

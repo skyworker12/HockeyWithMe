@@ -202,7 +202,7 @@
                                             <action selector="closeOptionsView:" destination="xwW-Dl-0Hi" eventType="touchUpInside" id="8Zt-wi-AFC"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата с " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idS-cV-qb0">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата с " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idS-cV-qb0">
                                         <rect key="frame" x="8" y="38" width="140" height="30"/>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
@@ -213,19 +213,19 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
                                         <rect key="frame" x="172" y="38" width="140" height="30"/>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5jd-l8-mGs"/>
                                             <constraint firstAttribute="width" constant="140" id="UcJ-gB-ii5"/>
                                         </constraints>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dCj-Qn-FDf">
-                                        <rect key="frame" x="8" y="111" width="304" height="216"/>
+                                        <rect key="frame" x="8" y="139" width="304" height="196"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="574285328.14517295">
@@ -264,22 +264,43 @@
                                         </segments>
                                         <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="yv5-0D-dcE">
+                                        <rect key="frame" x="8" y="111" width="304" height="28"/>
+                                        <items>
+                                            <barButtonItem title=" Сегодня" width="174" style="done" id="GUP-n1-zCy">
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="chooseTodayDate:" destination="xwW-Dl-0Hi" id="0bB-hR-spb"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Удалить" width="305.5" style="done" id="xqu-z4-zQ8">
+                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="deleteChoosenDate:" destination="xwW-Dl-0Hi" id="L2A-7z-Uc2"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </toolbar>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="1kP-0F-RSy"/>
-                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="TzI-J3-PZ4" secondAttribute="bottom" constant="7" id="FwZ-nz-W2K"/>
+                                    <constraint firstAttribute="trailing" secondItem="yv5-0D-dcE" secondAttribute="trailing" constant="8" id="FyQ-zs-Zno"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="top" secondItem="4GD-gU-SMI" secondAttribute="top" id="GsH-Th-hz0"/>
                                     <constraint firstItem="Adg-sR-Ugt" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="Igg-dW-Xz2"/>
                                     <constraint firstAttribute="trailing" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="8" id="LWd-Sh-IcY"/>
+                                    <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="yv5-0D-dcE" secondAttribute="bottom" id="Q4Y-bW-1Aw"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="QjA-SC-8Nk"/>
+                                    <constraint firstItem="yv5-0D-dcE" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="Qyf-P6-zxf"/>
                                     <constraint firstAttribute="trailing" secondItem="TzI-J3-PZ4" secondAttribute="trailing" constant="8" id="RDr-il-cap"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="idS-cV-qb0" secondAttribute="bottom" constant="8" id="RMp-Ln-1Iz"/>
                                     <constraint firstAttribute="trailing" secondItem="1V5-qL-auH" secondAttribute="trailing" constant="8" id="Rdd-WR-2to"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="8" id="V7W-1T-q2v"/>
+                                    <constraint firstItem="yv5-0D-dcE" firstAttribute="top" secondItem="TzI-J3-PZ4" secondAttribute="bottom" constant="7" id="YFy-TQ-GSI"/>
                                     <constraint firstAttribute="bottom" secondItem="pY8-0D-v9l" secondAttribute="bottom" constant="25" id="bGh-ie-oXu"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="e6j-Ad-ry8"/>
-                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="top" secondItem="dCj-Qn-FDf" secondAttribute="bottom" constant="23" id="iL1-jG-4pt"/>
+                                    <constraint firstItem="pY8-0D-v9l" firstAttribute="top" secondItem="dCj-Qn-FDf" secondAttribute="bottom" constant="15" id="iL1-jG-4pt"/>
                                     <constraint firstItem="dCj-Qn-FDf" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="oV7-Yf-I4e"/>
                                     <constraint firstAttribute="trailing" secondItem="dCj-Qn-FDf" secondAttribute="trailing" constant="8" id="oqC-4V-3nQ"/>
                                     <constraint firstAttribute="trailing" secondItem="pY8-0D-v9l" secondAttribute="trailing" constant="8" id="p7j-Fm-hYg"/>
@@ -298,9 +319,13 @@
                         <viewLayoutGuide key="safeArea" id="rNp-9p-ACH"/>
                         <connections>
                             <outlet property="datePicker" destination="dCj-Qn-FDf" id="XA7-6g-dyc"/>
+                            <outlet property="deleteItemButton" destination="xqu-z4-zQ8" id="aZp-Xh-D1K"/>
+                            <outlet property="endDateTextField" destination="Adg-sR-Ugt" id="R8h-l0-Dg9"/>
                             <outlet property="optionsSegmentController" destination="TzI-J3-PZ4" id="DQz-6p-Zvm"/>
                             <outlet property="optionsView" destination="4GD-gU-SMI" id="f3c-ZG-8QC"/>
                             <outlet property="searchResultsButton" destination="pY8-0D-v9l" id="4FL-Vc-bZD"/>
+                            <outlet property="startDateTextField" destination="idS-cV-qb0" id="5Hp-hB-Fr1"/>
+                            <outlet property="todayItemButton" destination="GUP-n1-zCy" id="VXs-Am-g2S"/>
                         </connections>
                     </view>
                     <connections>

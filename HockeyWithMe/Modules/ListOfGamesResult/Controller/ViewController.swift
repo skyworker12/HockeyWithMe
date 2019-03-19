@@ -10,9 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     var createListOfResults = CreatListOfGameResults()
+    var choosenDate: String{
+        get{
+            let value = "0"
+            return value
+        }
+        set{
+            print(newValue)
+        }
+    }
     var listOfGameResultArray = [MyStructTwo](){
         didSet{
-            //print(self.listOfGameResultArray)
             DispatchQueue.main.async{
                 self.listOfGameResultsView!.listOfGameResultsTableView?.reloadData()
             }
@@ -40,15 +48,12 @@ class ViewController: UIViewController {
             }
         })
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("ViewController will Appear")
-    }
     @IBAction func showOptions(_ sender: Any) {
         let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as? PopUpGameResultsViewController
         self.addChild(popUpVC!)
         popUpVC!.view.frame = self.view.frame
         self.view.addSubview(popUpVC!.view)
         popUpVC!.didMove(toParent: self)
+        print(choosenDate)
     }
 }

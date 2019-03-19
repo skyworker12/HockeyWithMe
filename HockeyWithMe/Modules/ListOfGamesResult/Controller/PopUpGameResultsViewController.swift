@@ -11,10 +11,13 @@ import UIKit
 class PopUpGameResultsViewController: UIViewController {
     
     @IBOutlet weak var popUpGameResultsView: PopUpGamesResultsView?
+    let dateFormatter = DateFormatter()
     override func viewDidLoad() {
         super.viewDidLoad()
         print("popUpGameResultsView did load")
         self.popUpGameResultsView!.moveIn()
+        self.popUpGameResultsView?.datePicker.addTarget(self, action: #selector(chooseDate(_:)), for: .valueChanged)
+        
 
     }
     override func viewDidDisappear(_ animated: Bool) {
@@ -23,20 +26,35 @@ class PopUpGameResultsViewController: UIViewController {
         self.view.removeFromSuperview()
         self.removeFromParent()
     }
-    //MARK: методы появления и скрытия pop up
+    //MARK: метод скрытия pop up
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch: UITouch? = touches.first
         if touch?.view != self.popUpGameResultsView!.optionsView{
-            //moveOut()
             self.popUpGameResultsView!.animHide()
         }
     }
-    
+    //MARK: button actions
     @IBAction func searchResults(_ sender: Any) {
+    
+        
     }
     @IBAction func closeOptionsView(_ sender: Any) {
         self.popUpGameResultsView!.animHide()
     }
+    @IBAction func deleteChoosenDate(_ sender: Any) {
+        self.changeTextFieldValue(value: "")
+    }
+    @IBAction func chooseTodayDate(_ sender: Any) {
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        self.popUpGameResultsView?.datePicker.setDate(Date(), animated: false)
+        self.changeTextFieldValue(value: dateFormatter.string(from:(self.popUpGameResultsView?.datePicker.date)!))
+    }
+    //MARK: target selectors
+    @objc func chooseDate(_ sender: UIDatePicker) {
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        self.changeTextFieldValue(value: dateFormatter.string(from: (sender.date)))
+    }
+    
     
     deinit {
         print("removed from the memory")
