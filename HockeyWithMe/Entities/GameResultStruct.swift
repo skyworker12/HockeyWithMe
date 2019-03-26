@@ -63,11 +63,11 @@ struct Venue: Codable {
     let name, link: String
 }
 
-struct MyStruct{
+struct DateAndGamesStruct{
      let date: String
      let games: [Game]
 }
-struct MyStructTwo{
+struct ShortResults{
      let gamePk: Int
      let gameDate: String
      let gameStatus: String
@@ -75,4 +75,9 @@ struct MyStructTwo{
      let homeTeamScore: Int
      let awayTeamName: String
      let awayTeamScore: Int
+}
+
+struct UserDates{
+    let startDate: String
+    let endDate: String
 }

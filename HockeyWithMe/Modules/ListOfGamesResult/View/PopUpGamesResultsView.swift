@@ -9,6 +9,7 @@
 import UIKit
 
 class PopUpGamesResultsView: UIView {
+    
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
     @IBOutlet weak var optionsView: UIView!
@@ -17,14 +18,18 @@ class PopUpGamesResultsView: UIView {
     @IBOutlet weak var optionsSegmentController: UISegmentedControl!
     @IBOutlet weak var deleteItemButton: UIBarButtonItem!
     @IBOutlet weak var todayItemButton: UIBarButtonItem!
+    
     func moveIn(){
         self.animShow()
         self.backgroundColor = UIColor.black.withAlphaComponent(0.75)
         self.optionsView.backgroundColor = UIColor.darkGray.withAlphaComponent(0.90)
         self.optionsView.layer.cornerRadius = 20
-        self.animShow()
         self.searchResultsButton.layer.cornerRadius = 20
         self.searchResultsButton.layer.borderWidth = 2
         self.searchResultsButton.layer.borderColor = UIColor.lightGray.cgColor
+    }
+    
+    deinit {
+        print("PopUpGamesResultsView removed from the memmory")
     }
 }

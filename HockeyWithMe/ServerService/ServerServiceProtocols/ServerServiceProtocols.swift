@@ -9,8 +9,6 @@
 import Foundation
 protocol GetJSONPRotocol{
     var urlResourse: String {get}
-    func getJson(completion:@escaping (GameResults?,Error?)->Void)
+    func getJson(dates: UserDates?,completion:@escaping (GameResults?,Error?)->Void)
 }
-protocol ParsingJSONProtocol{
-    func parsingJson()
-}
+

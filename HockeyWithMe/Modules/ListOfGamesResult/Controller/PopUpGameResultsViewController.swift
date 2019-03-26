@@ -12,6 +12,8 @@ class PopUpGameResultsViewController: UIViewController {
     
     @IBOutlet weak var popUpGameResultsView: PopUpGamesResultsView?
     let dateFormatter = DateFormatter()
+    weak var delegate: ExtendedOptionsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("popUpGameResultsView did load")
@@ -35,8 +37,7 @@ class PopUpGameResultsViewController: UIViewController {
     }
     //MARK: button actions
     @IBAction func searchResults(_ sender: Any) {
-    
-        
+        self.sendDates()
     }
     @IBAction func closeOptionsView(_ sender: Any) {
         self.popUpGameResultsView!.animHide()
@@ -45,19 +46,20 @@ class PopUpGameResultsViewController: UIViewController {
         self.changeTextFieldValue(value: "")
     }
     @IBAction func chooseTodayDate(_ sender: Any) {
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         self.popUpGameResultsView?.datePicker.setDate(Date(), animated: false)
-        self.changeTextFieldValue(value: dateFormatter.string(from:(self.popUpGameResultsView?.datePicker.date)!))
+        guard let pickerDate = self.popUpGameResultsView?.datePicker.date else {return}
+        self.changeTextFieldValue(value: dateFormatter.string(from:pickerDate))
     }
     //MARK: target selectors
     @objc func chooseDate(_ sender: UIDatePicker) {
-        dateFormatter.dateFormat = "MM/dd/yyyy"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         self.changeTextFieldValue(value: dateFormatter.string(from: (sender.date)))
     }
     
     
     deinit {
-        print("removed from the memory")
+        print("PopUpGameResultsViewController removed from the memory")
     }
 }
 

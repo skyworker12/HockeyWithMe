@@ -9,18 +9,17 @@
 import Foundation
 class CreatListOfGameResults: CreatListOfGame{
     var getJson = GetJSON()
-    func creatListOfGame(completion:@escaping ([MyStructTwo],Error?)->()){
-        getJson.getJson(completion: {(data, error) in
-            var downloadDataArray = [MyStructTwo]()
-            if error != nil{
-                completion(downloadDataArray, error)
-               // print(error?.localizedDescription)
-            }
-            if data != nil{
+    func creatListOfGame(userDates: UserDates?,completion:@escaping ([ShortResults],Error?)->()){
+        print("я туууууут")
+        getJson.getJson(dates: userDates, completion: {(data, error) in
+            var downloadDataArray = [ShortResults]()
+            if let downloadError = error{
+                completion(downloadDataArray, downloadError)
+            }else if data != nil{
                 for i in data!.dates{
-                    let container = MyStruct(date: i.date, games: i.games)
+                    let container = DateAndGamesStruct(date: i.date, games: i.games)
                     for item in container.games{
-                        let containerTwo = MyStructTwo(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score)
+                        let containerTwo = ShortResults(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score)
                         downloadDataArray.append(containerTwo)
                     }
                 }

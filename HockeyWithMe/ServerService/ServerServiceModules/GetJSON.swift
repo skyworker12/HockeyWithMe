@@ -9,18 +9,21 @@
 import Foundation
 class GetJSON: GetJSONPRotocol{
     var urlResourse: String{
-        return "https://statsapi.web.nhl.com/api/v1/schedule/"
+        return "https://statsapi.web.nhl.com/api/v1/schedule"
     }
-    func getJson(completion: @escaping (GameResults?,Error?) -> ()) {
-        let url = URL(string: urlResourse)
-        if url != nil{
-            URLSession.shared.dataTask(with: url!, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
+    func getJson(dates: UserDates?, completion: @escaping (GameResults?,Error?) -> ()) {
+        guard var url = URL(string: "loch") else {return}
+        if let dates = dates{
+          let urlString = ("\(urlResourse) + ?startDate=\(dates.startDate) + &endDate=\(dates.endDate)")
+            url = URL(string: urlString)!
+        }else{
+            url = URL(string: urlResourse)!
+        }
+        print(url)
+            URLSession.shared.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
               do{
                 if let data = data{
-                    //let gettingEntries = String(data: data, encoding: .utf8)
-                    //print("respondingString = \(String(describing: gettingEntries))")
                     let containerForParsing = try JSONDecoder().decode(GameResults.self, from: data)
-                    //print(containerForParsing)
                     completion(containerForParsing, nil)
                 }
                 if let error = error{
@@ -32,8 +35,5 @@ class GetJSON: GetJSONPRotocol{
                 print("fdfdfdfd")
               }
                 }).resume()
-        }else{
-            print("Передан пустой url")
-        }
     }
 }

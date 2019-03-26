@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */; };
+		DDB5A6E122495FB000E26C14 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E022495FB000E26C14 /* StringExtensions.swift */; };
+		DDB5A6E3224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E2224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift */; };
+		DDB5A6E62249702000E26C14 /* ExtendedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E52249702000E26C14 /* ExtendedOptions.swift */; };
+		DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift */; };
 		DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433C220D55A400A73247 /* AppDelegate.swift */; };
-		DDE7433F220D55A400A73247 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433E220D55A400A73247 /* ViewController.swift */; };
+		DDE7433F220D55A400A73247 /* GameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433E220D55A400A73247 /* GameResultsViewController.swift */; };
 		DDE74342220D55A400A73247 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE74340220D55A400A73247 /* Main.storyboard */; };
 		DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE74343220D55A400A73247 /* HockeyWithMe.xcdatamodeld */; };
 		DDE74347220D55A800A73247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE74346220D55A800A73247 /* Assets.xcassets */; };
@@ -21,17 +24,20 @@
 		DDE74367221E819500A73247 /* ListOfGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74366221E819500A73247 /* ListOfGameView.swift */; };
 		DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */; };
 		DDE7436C2227B60300A73247 /* CreatListOfGameResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7436B2227B60300A73247 /* CreatListOfGameResults.swift */; };
-		DDE7436E2227B66F00A73247 /* ListOfGameResultExtansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */; };
+		DDE7436E2227B66F00A73247 /* GameResultsViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7436D2227B66F00A73247 /* GameResultsViewControllerExtensions.swift */; };
 		DDE743CA223A1F4400A73247 /* PopUpGamesResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE743C9223A1F4400A73247 /* PopUpGamesResultsView.swift */; };
 		DDE743CC223A207F00A73247 /* PopUpGameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE743CB223A207F00A73247 /* PopUpGameResultsViewController.swift */; };
-		DDE743CF223A22FE00A73247 /* UiViewExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE743CE223A22FE00A73247 /* UiViewExtansion.swift */; };
+		DDE743CF223A22FE00A73247 /* UiViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE743CE223A22FE00A73247 /* UiViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGameResultsViewControllerExtansions.swift; sourceTree = "<group>"; };
+		DDB5A6E022495FB000E26C14 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		DDB5A6E2224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultsCellExtentions.swift; sourceTree = "<group>"; };
+		DDB5A6E52249702000E26C14 /* ExtendedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedOptions.swift; sourceTree = "<group>"; };
+		DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGameResultsViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DDE74339220D55A400A73247 /* HockeyWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7433C220D55A400A73247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDE7433E220D55A400A73247 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDE7433E220D55A400A73247 /* GameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsViewController.swift; sourceTree = "<group>"; };
 		DDE74341220D55A400A73247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDE74344220D55A400A73247 /* HockeyWithMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HockeyWithMe.xcdatamodel; sourceTree = "<group>"; };
 		DDE74346220D55A800A73247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,10 +50,10 @@
 		DDE74366221E819500A73247 /* ListOfGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameView.swift; sourceTree = "<group>"; };
 		DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultsViewProtocol.swift; sourceTree = "<group>"; };
 		DDE7436B2227B60300A73247 /* CreatListOfGameResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatListOfGameResults.swift; sourceTree = "<group>"; };
-		DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultExtansions.swift; sourceTree = "<group>"; };
+		DDE7436D2227B66F00A73247 /* GameResultsViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DDE743C9223A1F4400A73247 /* PopUpGamesResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGamesResultsView.swift; sourceTree = "<group>"; };
 		DDE743CB223A207F00A73247 /* PopUpGameResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGameResultsViewController.swift; sourceTree = "<group>"; };
-		DDE743CE223A22FE00A73247 /* UiViewExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtansion.swift; sourceTree = "<group>"; };
+		DDE743CE223A22FE00A73247 /* UiViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DDE44630224037D9002A409E /* Global Extansions */ = {
+		DDB5A6E4224964F200E26C14 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				DDE743CE223A22FE00A73247 /* UiViewExtansion.swift */,
+				DDE7435A22114EE500A73247 /* GameResultStruct.swift */,
 			);
-			path = "Global Extansions";
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DDE44630224037D9002A409E /* Global Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDE743CE223A22FE00A73247 /* UiViewExtension.swift */,
+				DDB5A6E022495FB000E26C14 /* StringExtensions.swift */,
+			);
+			path = "Global Extensions";
 			sourceTree = "<group>";
 		};
 		DDE74330220D55A400A73247 = {
@@ -90,10 +105,10 @@
 			children = (
 				DDE743CD223A227A00A73247 /* Modules */,
 				DDE74352220D592D00A73247 /* ServerService */,
-				DDE74368221FCA1F00A73247 /* Protocols */,
-				DDE44630224037D9002A409E /* Global Extansions */,
-				DDE7433C220D55A400A73247 /* AppDelegate.swift */,
+				DDE44630224037D9002A409E /* Global Extensions */,
+				DDB5A6E4224964F200E26C14 /* Entities */,
 				DDE74346220D55A800A73247 /* Assets.xcassets */,
+				DDE7433C220D55A400A73247 /* AppDelegate.swift */,
 				DDE74348220D55A800A73247 /* LaunchScreen.storyboard */,
 				DDE7434B220D55A800A73247 /* Info.plist */,
 				DDE74343220D55A400A73247 /* HockeyWithMe.xcdatamodeld */,
@@ -104,10 +119,12 @@
 		DDE74351220D583500A73247 /* ListOfGamesResult */ = {
 			isa = PBXGroup;
 			children = (
+				DDE74340220D55A400A73247 /* Main.storyboard */,
+				DDE74368221FCA1F00A73247 /* Protocols */,
 				DDE74360221A82EF00A73247 /* Controller */,
 				DDE7435F221A82D800A73247 /* View */,
 				DDE7435E221A82C200A73247 /* Model */,
-				DDE74363221E777900A73247 /* Extansions */,
+				DDE74363221E777900A73247 /* Extensions */,
 			);
 			path = ListOfGamesResult;
 			sourceTree = "<group>";
@@ -117,7 +134,6 @@
 			children = (
 				DDE74353220D596300A73247 /* ServerServiceProtocols */,
 				DDE74354220D59A600A73247 /* ServerServiceModules */,
-				DDE7435922114E3B00A73247 /* ServerServiceStructs */,
 			);
 			path = ServerService;
 			sourceTree = "<group>";
@@ -138,14 +154,6 @@
 			path = ServerServiceModules;
 			sourceTree = "<group>";
 		};
-		DDE7435922114E3B00A73247 /* ServerServiceStructs */ = {
-			isa = PBXGroup;
-			children = (
-				DDE7435A22114EE500A73247 /* GameResultStruct.swift */,
-			);
-			path = ServerServiceStructs;
-			sourceTree = "<group>";
-		};
 		DDE7435E221A82C200A73247 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +165,6 @@
 		DDE7435F221A82D800A73247 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DDE74340220D55A400A73247 /* Main.storyboard */,
 				DDE74366221E819500A73247 /* ListOfGameView.swift */,
 				DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */,
 				DDE743C9223A1F4400A73247 /* PopUpGamesResultsView.swift */,
@@ -168,25 +175,27 @@
 		DDE74360221A82EF00A73247 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DDE7433E220D55A400A73247 /* ViewController.swift */,
+				DDE7433E220D55A400A73247 /* GameResultsViewController.swift */,
 				DDE743CB223A207F00A73247 /* PopUpGameResultsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		DDE74363221E777900A73247 /* Extansions */ = {
+		DDE74363221E777900A73247 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				DDE7436D2227B66F00A73247 /* ListOfGameResultExtansions.swift */,
-				DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift */,
+				DDE7436D2227B66F00A73247 /* GameResultsViewControllerExtensions.swift */,
+				DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift */,
+				DDB5A6E2224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift */,
 			);
-			path = Extansions;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		DDE74368221FCA1F00A73247 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				DDE74369221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift */,
+				DDB5A6E52249702000E26C14 /* ExtendedOptions.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -273,18 +282,21 @@
 				DDE74356220D5B0700A73247 /* ServerServiceProtocols.swift in Sources */,
 				DDE74365221E800300A73247 /* ListOfGamesResultsCell.swift in Sources */,
 				DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */,
-				DDE7433F220D55A400A73247 /* ViewController.swift in Sources */,
+				DDE7433F220D55A400A73247 /* GameResultsViewController.swift in Sources */,
 				DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */,
-				DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtansions.swift in Sources */,
+				DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift in Sources */,
 				DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */,
-				DDE743CF223A22FE00A73247 /* UiViewExtansion.swift in Sources */,
+				DDE743CF223A22FE00A73247 /* UiViewExtension.swift in Sources */,
+				DDB5A6E3224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift in Sources */,
+				DDB5A6E122495FB000E26C14 /* StringExtensions.swift in Sources */,
 				DDE74367221E819500A73247 /* ListOfGameView.swift in Sources */,
 				DDE74358221148A000A73247 /* GetJSON.swift in Sources */,
 				DDE743CA223A1F4400A73247 /* PopUpGamesResultsView.swift in Sources */,
 				DDE743CC223A207F00A73247 /* PopUpGameResultsViewController.swift in Sources */,
 				DDE7435B22114EE500A73247 /* GameResultStruct.swift in Sources */,
 				DDE7436C2227B60300A73247 /* CreatListOfGameResults.swift in Sources */,
-				DDE7436E2227B66F00A73247 /* ListOfGameResultExtansions.swift in Sources */,
+				DDE7436E2227B66F00A73247 /* GameResultsViewControllerExtensions.swift in Sources */,
+				DDB5A6E62249702000E26C14 /* ExtendedOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
