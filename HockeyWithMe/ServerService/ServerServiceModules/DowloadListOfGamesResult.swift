@@ -7,19 +7,18 @@
 //
 
 import Foundation
-class GetJSON: GetJSONPRotocol{
+class DowloadListOfGamesResult: DownoloadGamesResult{
     var urlResourse: String{
         return "https://statsapi.web.nhl.com/api/v1/schedule"
     }
-    func getJson(dates: UserDates?, completion: @escaping (GameResults?,Error?) -> ()) {
+    func downloadGamesResult(dates: UserDates?, completion: @escaping (GameResults?,Error?) -> ()) {
         guard var url = URL(string: "loch") else {return}
         if let dates = dates{
-          let urlString = ("\(urlResourse) + ?startDate=\(dates.startDate) + &endDate=\(dates.endDate)")
+          let urlString = ("\(urlResourse)?startDate=\(dates.startDate)&endDate=\(dates.endDate)")
             url = URL(string: urlString)!
         }else{
             url = URL(string: urlResourse)!
         }
-        print(url)
             URLSession.shared.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
               do{
                 if let data = data{

@@ -37,9 +37,7 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     }
     
    func sendChosenDatesToParent(date: UserDates?) {
-        if let dateFromChildVC = date{
-            print(dateFromChildVC.startDate)
-        }
+       self.showGamesResult(userDates: date)
     }
 }
 

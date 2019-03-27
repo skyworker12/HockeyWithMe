@@ -7,8 +7,8 @@
 //
 
 import Foundation
-protocol GetJSONPRotocol{
+protocol DownoloadGamesResult{
     var urlResourse: String {get}
-    func getJson(dates: UserDates?,completion:@escaping (GameResults?,Error?)->Void)
+    func downloadGamesResult(dates: UserDates?,completion:@escaping (GameResults?,Error?)->Void)
 }
 
