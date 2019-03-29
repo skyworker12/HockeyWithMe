@@ -21,4 +21,7 @@ class ListOfGameView: UIView, ListOfGameResultsViewProtocol {
         self.aboutDatesView?.layer.borderWidth = 0.5
         self.aboutDatesView?.layer.borderColor = UIColor.white.cgColor
     }
+    func changeDateLabel(_ dates: UserDates){
+        self.gamesResultDateLabel?.text = ("\(dates.startDate) - \(dates.endDate)")
+    }
 }

@@ -23,6 +23,7 @@ class GameResultsViewController: UIViewController {
         didSet{
             DispatchQueue.main.async{
                 self.listOfGameResultsView!.listOfGameResultsTableView?.reloadData()
+                self.listOfGameResultsView?.changeDateLabel(self.defineDateRange(self.listOfGameResultArray))
             }
         }
     }

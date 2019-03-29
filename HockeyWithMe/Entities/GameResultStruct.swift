@@ -23,7 +23,7 @@ struct DateElement: Codable {
 struct Game: Codable {
     let gamePk: Int
     let link, gameType, season: String
-    let gameDate: String
+    var gameDate: String
     let status: Status
     let teams: Teams
     let venue: Venue
@@ -69,7 +69,7 @@ struct DateAndGamesStruct{
 }
 struct ShortResults{
      let gamePk: Int
-     let gameDate: String
+     var gameDate: String
      let gameStatus: String
      let homeTeamName: String
      let homeTeamScore: Int

@@ -13,4 +13,7 @@ extension String{
         formattedDate.removeLast(1)
         self = formattedDate
     }
+    mutating func formatOnlyDate(){
+        self.removeLast(10)
+    }
 }
