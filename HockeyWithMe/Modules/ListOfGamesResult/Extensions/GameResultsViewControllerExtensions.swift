@@ -25,8 +25,8 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
         return cell
     }
         
-    func showGamesResult(userDates: UserDates?){
-        self.createListOfResults.creatListOfGame(userDates: userDates, completion: {[unowned self](data, error) in
+    func showGamesResult(userDates: UserDates?, userDate: String?){
+        self.createListOfResults.creatListOfGame(userDates: userDates, userDate: userDate, completion: {[unowned self](data, error) in
             if error != nil{
                 self.downloadError = error
             }else{
@@ -37,7 +37,12 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     }
     
    func sendChosenDatesToParent(date: UserDates?) {
-       self.showGamesResult(userDates: date)
+       self.showGamesResult(userDates: date, userDate: nil)
+    }
+    
+    func sendChosenOneDateToParent(date: String?){
+        print("Здесь вызовется загрузка матчей")
+        self.showGamesResult(userDates: nil, userDate: date)
     }
     
     func defineDateRange(_ array: [ShortResults]) -> UserDates{

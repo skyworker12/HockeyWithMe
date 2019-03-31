@@ -17,7 +17,7 @@
 		DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDE74343220D55A400A73247 /* HockeyWithMe.xcdatamodeld */; };
 		DDE74347220D55A800A73247 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE74346220D55A800A73247 /* Assets.xcassets */; };
 		DDE7434A220D55A800A73247 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDE74348220D55A800A73247 /* LaunchScreen.storyboard */; };
-		DDE74356220D5B0700A73247 /* ServerServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */; };
+		DDE74356220D5B0700A73247 /* ServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74355220D5B0700A73247 /* ServerService.swift */; };
 		DDE74358221148A000A73247 /* DowloadListOfGamesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74357221148A000A73247 /* DowloadListOfGamesResult.swift */; };
 		DDE7435B22114EE500A73247 /* GameResultStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7435A22114EE500A73247 /* GameResultStruct.swift */; };
 		DDE74365221E800300A73247 /* ListOfGamesResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */; };
@@ -43,7 +43,7 @@
 		DDE74346220D55A800A73247 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDE74349220D55A800A73247 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDE7434B220D55A800A73247 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerServiceProtocols.swift; sourceTree = "<group>"; };
+		DDE74355220D5B0700A73247 /* ServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerService.swift; sourceTree = "<group>"; };
 		DDE74357221148A000A73247 /* DowloadListOfGamesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DowloadListOfGamesResult.swift; sourceTree = "<group>"; };
 		DDE7435A22114EE500A73247 /* GameResultStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultStruct.swift; sourceTree = "<group>"; };
 		DDE74364221E800300A73247 /* ListOfGamesResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGamesResultsCell.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		DDE74353220D596300A73247 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				DDE74355220D5B0700A73247 /* ServerServiceProtocols.swift */,
+				DDE74355220D5B0700A73247 /* ServerService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE74356220D5B0700A73247 /* ServerServiceProtocols.swift in Sources */,
+				DDE74356220D5B0700A73247 /* ServerService.swift in Sources */,
 				DDE74365221E800300A73247 /* ListOfGamesResultsCell.swift in Sources */,
 				DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */,
 				DDE7433F220D55A400A73247 /* GameResultsViewController.swift in Sources */,

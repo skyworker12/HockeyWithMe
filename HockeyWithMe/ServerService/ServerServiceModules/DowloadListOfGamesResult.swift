@@ -11,10 +11,13 @@ class DowloadListOfGamesResult: DownoloadGamesResult{
     var urlResourse: String{
         return "https://statsapi.web.nhl.com/api/v1/schedule"
     }
-    func downloadGamesResult(dates: UserDates?, completion: @escaping (GameResults?,Error?) -> ()) {
+    func downloadGamesResult(dates: UserDates?, date: String?, completion: @escaping (GameResults?,Error?) -> ()) {
         guard var url = URL(string: "loch") else {return}
         if let dates = dates{
           let urlString = ("\(urlResourse)?startDate=\(dates.startDate)&endDate=\(dates.endDate)")
+            url = URL(string: urlString)!
+        }else if let date = date{
+            let urlString = ("\(urlResourse)?date=\(date)")
             url = URL(string: urlString)!
         }else{
             url = URL(string: urlResourse)!

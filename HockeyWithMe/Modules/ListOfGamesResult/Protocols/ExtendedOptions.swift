@@ -9,4 +9,5 @@
 import Foundation
 protocol ExtendedOptionsDelegate: class{
     func sendChosenDatesToParent(date: UserDates?)
+    func sendChosenOneDateToParent(date: String?)
 }

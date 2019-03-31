@@ -10,18 +10,11 @@ import UIKit
 
 class GameResultsViewController: UIViewController {
     var createListOfResults = CreatListOfGameResults()
-    var choosenDate: String{
-        get{
-            let value = "0"
-            return value
-        }
-        set{
-            print(newValue)
-        }
-    }
     var listOfGameResultArray = [ShortResults](){
         didSet{
             DispatchQueue.main.async{
+                self.listOfGameResultsView!.listOfGameResultsTableView?.delegate = self
+                self.listOfGameResultsView!.listOfGameResultsTableView?.dataSource = self
                 self.listOfGameResultsView!.listOfGameResultsTableView?.reloadData()
                 self.listOfGameResultsView?.changeDateLabel(self.defineDateRange(self.listOfGameResultArray))
             }
@@ -36,11 +29,8 @@ class GameResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.listOfGameResultsView!.listOfGameResultsTableView?.delegate = self
-        self.listOfGameResultsView!.listOfGameResultsTableView?.dataSource = self
-        
         self.listOfGameResultsView?.viewLayout()
-        showGamesResult(userDates: nil)
+        showGamesResult(userDates: nil, userDate: nil)
         
 
     }

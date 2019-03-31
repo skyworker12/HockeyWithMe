@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -242,22 +242,11 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата с " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idS-cV-qb0">
-                                        <rect key="frame" x="8" y="38" width="140" height="30"/>
+                                        <rect key="frame" x="8" y="38" width="97" height="30"/>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="A5X-G2-Rrd"/>
-                                            <constraint firstAttribute="width" constant="140" id="xqA-O6-VOL"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
-                                        <rect key="frame" x="172" y="38" width="140" height="30"/>
-                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="5jd-l8-mGs"/>
-                                            <constraint firstAttribute="width" constant="140" id="UcJ-gB-ii5"/>
+                                            <constraint firstAttribute="width" constant="97" id="xqA-O6-VOL"/>
                                         </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -300,6 +289,7 @@
                                         <segments>
                                             <segment title="Дата с "/>
                                             <segment title="Дата по"/>
+                                            <segment title="Двта"/>
                                         </segments>
                                         <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
@@ -321,6 +311,27 @@
                                         </items>
                                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </toolbar>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-7V-qco">
+                                        <rect key="frame" x="216" y="38" width="96" height="30"/>
+                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="96" id="gCf-bW-v11"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
+                                        <rect key="frame" x="113" y="38" width="95" height="30"/>
+                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5jd-l8-mGs"/>
+                                            <constraint firstAttribute="width" constant="95" id="UcJ-gB-ii5"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -328,13 +339,13 @@
                                     <constraint firstAttribute="trailing" secondItem="yv5-0D-dcE" secondAttribute="trailing" constant="8" id="FyQ-zs-Zno"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="top" secondItem="4GD-gU-SMI" secondAttribute="top" id="GsH-Th-hz0"/>
                                     <constraint firstItem="Adg-sR-Ugt" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="Igg-dW-Xz2"/>
-                                    <constraint firstAttribute="trailing" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="8" id="LWd-Sh-IcY"/>
                                     <constraint firstItem="dCj-Qn-FDf" firstAttribute="top" secondItem="yv5-0D-dcE" secondAttribute="bottom" id="Q4Y-bW-1Aw"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="QjA-SC-8Nk"/>
                                     <constraint firstItem="yv5-0D-dcE" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="Qyf-P6-zxf"/>
                                     <constraint firstAttribute="trailing" secondItem="TzI-J3-PZ4" secondAttribute="trailing" constant="8" id="RDr-il-cap"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="idS-cV-qb0" secondAttribute="bottom" constant="8" id="RMp-Ln-1Iz"/>
                                     <constraint firstAttribute="trailing" secondItem="1V5-qL-auH" secondAttribute="trailing" constant="8" id="Rdd-WR-2to"/>
+                                    <constraint firstItem="6gT-7V-qco" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="Tbv-GY-iNu"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="8" id="V7W-1T-q2v"/>
                                     <constraint firstItem="yv5-0D-dcE" firstAttribute="top" secondItem="TzI-J3-PZ4" secondAttribute="bottom" constant="7" id="YFy-TQ-GSI"/>
                                     <constraint firstAttribute="bottom" secondItem="pY8-0D-v9l" secondAttribute="bottom" constant="25" id="bGh-ie-oXu"/>
@@ -343,8 +354,10 @@
                                     <constraint firstItem="dCj-Qn-FDf" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="oV7-Yf-I4e"/>
                                     <constraint firstAttribute="trailing" secondItem="dCj-Qn-FDf" secondAttribute="trailing" constant="8" id="oqC-4V-3nQ"/>
                                     <constraint firstAttribute="trailing" secondItem="pY8-0D-v9l" secondAttribute="trailing" constant="8" id="p7j-Fm-hYg"/>
+                                    <constraint firstItem="Adg-sR-Ugt" firstAttribute="centerX" secondItem="TzI-J3-PZ4" secondAttribute="centerX" constant="0.5" id="s2n-nL-HaU"/>
                                     <constraint firstItem="pY8-0D-v9l" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="xmE-ZR-G3x"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="yWW-qu-oCc"/>
+                                    <constraint firstAttribute="trailing" secondItem="6gT-7V-qco" secondAttribute="trailing" constant="8" id="ybY-qN-4u6"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -360,6 +373,7 @@
                             <outlet property="datePicker" destination="dCj-Qn-FDf" id="XA7-6g-dyc"/>
                             <outlet property="deleteItemButton" destination="xqu-z4-zQ8" id="aZp-Xh-D1K"/>
                             <outlet property="endDateTextField" destination="Adg-sR-Ugt" id="R8h-l0-Dg9"/>
+                            <outlet property="oneDateTextField" destination="6gT-7V-qco" id="R6f-7Y-zBc"/>
                             <outlet property="optionsSegmentController" destination="TzI-J3-PZ4" id="DQz-6p-Zvm"/>
                             <outlet property="optionsView" destination="4GD-gU-SMI" id="f3c-ZG-8QC"/>
                             <outlet property="searchResultsButton" destination="pY8-0D-v9l" id="4FL-Vc-bZD"/>
@@ -377,8 +391,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-горизонтальная-линия-filled-100" width="75" height="75"/>
-        <image name="icons8-меню-50" width="37.5" height="37.5"/>
-        <image name="icons8-промежуток-дат-50" width="37.5" height="37.5"/>
+        <image name="icons8-горизонтальная-линия-filled-100" width="100" height="100"/>
+        <image name="icons8-меню-50" width="50" height="50"/>
+        <image name="icons8-промежуток-дат-50" width="50" height="50"/>
     </resources>
 </document>

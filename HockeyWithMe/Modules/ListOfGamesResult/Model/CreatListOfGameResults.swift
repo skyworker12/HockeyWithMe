@@ -9,9 +9,9 @@
 import Foundation
 class CreatListOfGameResults: CreatListOfGame{
     var downloadListOfGameResults = DowloadListOfGamesResult()
-    func creatListOfGame(userDates: UserDates?,completion:@escaping ([ShortResults],Error?)->()){
+    func creatListOfGame(userDates: UserDates?,userDate: String?,completion:@escaping ([ShortResults],Error?)->()){
         print("я туууууут")
-        downloadListOfGameResults.downloadGamesResult(dates: userDates, completion: {(data, error) in
+        downloadListOfGameResults.downloadGamesResult(dates: userDates, date: userDate, completion: {(data, error) in
             var downloadDataArray = [ShortResults]()
             if let downloadError = error{
                 completion(downloadDataArray, downloadError)

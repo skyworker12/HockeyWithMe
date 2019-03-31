@@ -9,6 +9,6 @@
 import Foundation
 protocol DownoloadGamesResult{
     var urlResourse: String {get}
-    func downloadGamesResult(dates: UserDates?,completion:@escaping (GameResults?,Error?)->Void)
+    func downloadGamesResult(dates: UserDates?, date: String?, completion:@escaping (GameResults?,Error?)->Void)
 }
 

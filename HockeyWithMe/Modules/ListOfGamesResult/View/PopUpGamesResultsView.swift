@@ -12,6 +12,7 @@ class PopUpGamesResultsView: UIView {
     
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet weak var oneDateTextField: UITextField!
     @IBOutlet weak var optionsView: UIView!
     @IBOutlet weak var searchResultsButton: UIButton!
     @IBOutlet weak var datePicker: UIDatePicker!
