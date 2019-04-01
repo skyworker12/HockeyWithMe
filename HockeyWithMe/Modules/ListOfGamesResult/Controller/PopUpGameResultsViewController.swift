@@ -43,18 +43,18 @@ class PopUpGameResultsViewController: UIViewController {
         self.popUpGameResultsView!.animHide()
     }
     @IBAction func deleteChoosenDate(_ sender: Any) {
-        self.changeTextFieldValue(value: "")
+        self.popUpGameResultsView?.changeTextFieldValue(value: "")
     }
     @IBAction func chooseTodayDate(_ sender: Any) {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         self.popUpGameResultsView?.datePicker.setDate(Date(), animated: false)
         guard let pickerDate = self.popUpGameResultsView?.datePicker.date else {return}
-        self.changeTextFieldValue(value: dateFormatter.string(from:pickerDate))
+        self.popUpGameResultsView?.changeTextFieldValue(value: dateFormatter.string(from:pickerDate))
     }
     //MARK: target selectors
     @objc func chooseDate(_ sender: UIDatePicker) {
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        self.changeTextFieldValue(value: dateFormatter.string(from: (sender.date)))
+        self.popUpGameResultsView?.changeTextFieldValue(value: dateFormatter.string(from: (sender.date)))
     }
     
     

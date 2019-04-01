@@ -30,6 +30,31 @@ class PopUpGamesResultsView: UIView {
         self.searchResultsButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
+    func editTextField(textField: UITextField, textFieldValue: TextFieldValue){
+        switch textFieldValue{
+        case .none:
+            textField.layer.borderWidth = 1
+            textField.layer.borderColor = UIColor.red.cgColor
+        case .some:
+            textField.layer.borderWidth = 0
+        }
+    }
+    
+    func changeTextFieldValue(value: String){
+        switch optionsSegmentController.selectedSegmentIndex{
+        case 0:
+            self.startDateTextField.text = value
+            self.editTextField(textField: startDateTextField, textFieldValue: .some)
+        case 1:
+            self.endDateTextField.text = value
+            self.editTextField(textField: endDateTextField, textFieldValue: .some)
+        case 2:
+            self.oneDateTextField.text = value
+            self.editTextField(textField: oneDateTextField, textFieldValue: .some)
+        default:
+            print("error")
+        }
+    }
     deinit {
         print("PopUpGamesResultsView removed from the memmory")
     }
