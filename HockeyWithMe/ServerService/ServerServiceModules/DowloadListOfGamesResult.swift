@@ -29,12 +29,10 @@ class DowloadListOfGamesResult: DownoloadGamesResult{
                     completion(containerForParsing, nil)
                 }
                 if let error = error{
-                    print("error while getting data")
                     completion(nil, error)
                 }
               }catch let catchError{
                 print(catchError)
-                print("fdfdfdfd")
               }
                 }).resume()
     }

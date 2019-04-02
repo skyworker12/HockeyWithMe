@@ -18,4 +18,10 @@ extension ListOfGamesResultsCell{
         self.gameDateLabel.text = arrayWithData[0].gameDate
         self.gameDateLabel.text?.dateFormatter()
     }
+    func customizeCell(){
+        self.backgroundColor = UIColor.clear
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 5
+        self.layer.borderColor = UIColor.lightGray.cgColor
+    }
 }

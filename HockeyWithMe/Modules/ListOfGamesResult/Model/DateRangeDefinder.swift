@@ -18,12 +18,12 @@ class DateRangeDefinder{
             date.formatOnlyDate()
             datesSet.insert(date)
         }
+        
         for i in datesSet.sorted(){
             datesArray.append(i)
         }
         
         dateRange = UserDates(startDate: datesArray[0], endDate: datesArray[datesArray.count - 1])
-        print(dateRange)
         return dateRange
     }
 }

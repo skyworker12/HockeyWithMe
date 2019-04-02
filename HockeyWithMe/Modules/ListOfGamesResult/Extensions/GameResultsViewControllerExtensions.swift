@@ -16,12 +16,8 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "GoToFullGameInfo") as! ListOfGamesResultsCell
-       //cell.awayTeamLabel.text = listOfGameResultArray[indexPath.row].awayTeamName
         cell.fillingCell(arrayWithData: [listOfGameResultArray[indexPath.row]])
-        cell.backgroundColor = UIColor.clear
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 5
-        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.customizeCell()
         return cell
     }
         
@@ -31,7 +27,6 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
                 self.downloadError = error
             }else{
                 self.listOfGameResultArray = data
-                print(self.listOfGameResultArray)
             }
         })
     }
@@ -42,6 +37,13 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     
     func sendChosenOneDateToParent(date: String?){
         self.showGamesResult(userDates: nil, userDate: date)
+    }
+    
+    func creatErrorAlert(_ error: Error?){
+        let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ок", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 

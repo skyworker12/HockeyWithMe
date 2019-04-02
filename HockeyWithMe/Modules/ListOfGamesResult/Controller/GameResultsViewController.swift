@@ -9,24 +9,25 @@
 import UIKit
 
 class GameResultsViewController: UIViewController {
+    @IBOutlet weak var listOfGameResultsView: ListOfGameView?
     var createListOfResults = CreatListOfGameResults()
     var dateRangeDefinder = DateRangeDefinder()
     var listOfGameResultArray = [ShortResults](){
         didSet{
             DispatchQueue.main.async{
-                self.listOfGameResultsView!.listOfGameResultsTableView?.delegate = self
-                self.listOfGameResultsView!.listOfGameResultsTableView?.dataSource = self
-                self.listOfGameResultsView!.listOfGameResultsTableView?.reloadData()
-            self.listOfGameResultsView?.changeDateLabel(self.dateRangeDefinder.defineDateRange(self.listOfGameResultArray))
+                guard let view = self.listOfGameResultsView else {return}
+                view.listOfGameResultsTableView?.delegate = self
+                view.listOfGameResultsTableView?.dataSource = self
+                view.listOfGameResultsTableView?.reloadData()
+                view.changeDateLabel(self.dateRangeDefinder.defineDateRange(self.listOfGameResultArray))
             }
         }
     }
     var downloadError: Error?{
         didSet{
-            print("Ошибка при загрузке")
+           creatErrorAlert(self.downloadError)
         }
     }
-    @IBOutlet weak var listOfGameResultsView: ListOfGameView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
