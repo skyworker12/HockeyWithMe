@@ -7,8 +7,7 @@
 //
 
 import Foundation
-protocol DownoloadGamesResult{
-    var urlResourse: String {get}
+protocol DownoloadGamesResult: class{
     func downloadGamesResult(dates: UserDates?, date: String?, completion:@escaping (GameResults?,Error?)->Void)
 }
 

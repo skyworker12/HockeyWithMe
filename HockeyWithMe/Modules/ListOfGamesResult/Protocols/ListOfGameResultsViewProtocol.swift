@@ -12,5 +12,5 @@ protocol ListOfGameResultsViewProtocol{
     var listOfGameResultsTableView: UITableView? {get set}
 }
 protocol CreatListOfGame{
-    func creatListOfGame(userDates: UserDates?, userDate: String?,completion:@escaping ([ShortResults],Error?)->Void)
+    func creatListOfGame(userDates: UserDates?, userDate: String?,completion:@escaping ([ShortResults]?,Error?)->Void)
 }

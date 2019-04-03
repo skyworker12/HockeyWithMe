@@ -20,6 +20,7 @@ class GameResultsViewController: UIViewController {
                 view.listOfGameResultsTableView?.dataSource = self
                 view.listOfGameResultsTableView?.reloadData()
                 view.changeDateLabel(self.dateRangeDefinder.defineDateRange(self.listOfGameResultArray))
+                view.showTableView()
             }
         }
     }

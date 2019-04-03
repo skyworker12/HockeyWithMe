@@ -24,6 +24,7 @@ class DateRangeDefinder{
         }
         
         dateRange = UserDates(startDate: datesArray[0], endDate: datesArray[datesArray.count - 1])
+        
         return dateRange
     }
 }

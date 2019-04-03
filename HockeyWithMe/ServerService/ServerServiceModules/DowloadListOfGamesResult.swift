@@ -8,20 +8,10 @@
 
 import Foundation
 class DowloadListOfGamesResult: DownoloadGamesResult{
-    var urlResourse: String{
-        return "https://statsapi.web.nhl.com/api/v1/schedule"
-    }
+    
     func downloadGamesResult(dates: UserDates?, date: String?, completion: @escaping (GameResults?,Error?) -> ()) {
-        guard var url = URL(string: "loch") else {return}
-        if let dates = dates{
-          let urlString = ("\(urlResourse)?startDate=\(dates.startDate)&endDate=\(dates.endDate)")
-            url = URL(string: urlString)!
-        }else if let date = date{
-            let urlString = ("\(urlResourse)?date=\(date)")
-            url = URL(string: urlString)!
-        }else{
-            url = URL(string: urlResourse)!
-        }
+        guard let url = URL(string: confirmUrl(dates: dates, date: date)) else {return}
+        
             URLSession.shared.dataTask(with: url, completionHandler: {(data: Data?, response: URLResponse?, error: Error?) -> Void in
               do{
                 if let data = data{
@@ -36,4 +26,26 @@ class DowloadListOfGamesResult: DownoloadGamesResult{
               }
                 }).resume()
     }
+    
 }
+
+extension DowloadListOfGamesResult{
+    private var urlResourse: String{
+        return "https://statsapi.web.nhl.com/api/v1/schedule"
+    }
+    
+    private func confirmUrl(dates: UserDates?, date: String?) -> String{
+        var url: String
+        
+        if let dates = dates{
+            url = ("\(urlResourse)?startDate=\(dates.startDate)&endDate=\(dates.endDate)")
+        }else if let date = date{
+            url = ("\(urlResourse)?date=\(date)")
+        }else{
+            url = urlResourse
+        }
+        
+        return url
+    }
+}
+

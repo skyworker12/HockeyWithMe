@@ -9,21 +9,32 @@
 import Foundation
 class CreatListOfGameResults: CreatListOfGame{
     var downloadListOfGameResults = DowloadListOfGamesResult()
-    func creatListOfGame(userDates: UserDates?,userDate: String?,completion:@escaping ([ShortResults],Error?)->()){
-        downloadListOfGameResults.downloadGamesResult(dates: userDates, date: userDate, completion: {(data, error) in
-            var downloadDataArray = [ShortResults]()
-            if let downloadError = error{
-                completion(downloadDataArray, downloadError)
-            }else if let data = data{
-                for i in data.dates{
-                    let container = DateAndGamesStruct(date: i.date, games: i.games)
-                    for item in container.games{
-                        let containerTwo = ShortResults(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score)
-                        downloadDataArray.append(containerTwo)
-                    }
-                }
-                completion(downloadDataArray, nil)
+
+    func creatListOfGame(userDates: UserDates?,userDate: String?,completion:@escaping ([ShortResults]?,Error?)->()){
+        downloadListOfGameResults.downloadGamesResult(dates: userDates, date: userDate, completion: {[weak self](data, error) in
+            if let data = data{
+                completion(self?.formationFinalArray(data), error)
+            }else{
+                completion(nil, error)
             }
         })
+    }
+}
+
+extension CreatListOfGameResults{
+    private func formationFinalArray(_ data: GameResults) -> [ShortResults]{
+        var finalArray = [ShortResults]()
+        
+        for i in data.dates {
+            let container = DateAndGamesStruct(date: i.date, games: i.games)
+            
+            for item in container.games{
+                let containerTwo = ShortResults(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score)
+                
+                finalArray.append(containerTwo)
+            }
+        }
+        
+        return finalArray
     }
 }

@@ -22,11 +22,11 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     }
         
     func showGamesResult(userDates: UserDates?, userDate: String?){
-        self.createListOfResults.creatListOfGame(userDates: userDates, userDate: userDate, completion: {[unowned self](data, error) in
-            if error != nil{
-                self.downloadError = error
-            }else{
-                self.listOfGameResultArray = data
+        self.createListOfResults.creatListOfGame(userDates: userDates, userDate: userDate, completion: {[weak self](data, error) in
+            if let error = error{
+                self?.downloadError = error
+            }else if let data = data{
+                self?.listOfGameResultArray = data
             }
         })
     }

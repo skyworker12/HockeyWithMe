@@ -24,4 +24,7 @@ class ListOfGameView: UIView, ListOfGameResultsViewProtocol {
     func changeDateLabel(_ dates: UserDates){
         self.gamesResultDateLabel?.text = ("\(dates.startDate) - \(dates.endDate)")
     }
+    func showTableView() {
+        self.listOfGameResultsTableView?.isHidden = false
+    }
 }
