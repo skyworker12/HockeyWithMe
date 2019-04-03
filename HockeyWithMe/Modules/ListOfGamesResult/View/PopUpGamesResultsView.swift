@@ -28,6 +28,7 @@ class PopUpGamesResultsView: UIView {
         self.searchResultsButton.layer.cornerRadius = 20
         self.searchResultsButton.layer.borderWidth = 2
         self.searchResultsButton.layer.borderColor = UIColor.lightGray.cgColor
+        self.datePicker.setValue(UIColor.white, forKeyPath: "textColor")
     }
     
     func editTextField(textField: UITextField, textFieldValue: TextFieldValue){

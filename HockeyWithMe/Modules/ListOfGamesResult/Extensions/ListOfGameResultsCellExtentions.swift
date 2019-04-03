@@ -20,7 +20,7 @@ extension ListOfGamesResultsCell{
     }
     func customizeCell(){
         self.backgroundColor = UIColor.clear
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 0.2
         self.layer.cornerRadius = 5
         self.layer.borderColor = UIColor.lightGray.cgColor
     }

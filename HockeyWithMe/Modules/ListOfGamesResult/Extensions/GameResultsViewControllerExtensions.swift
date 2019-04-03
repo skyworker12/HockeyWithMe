@@ -30,8 +30,8 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
             }
         })
     }
-    
-   func sendChosenDatesToParent(date: UserDates?) {
+   
+    func sendChosenDatesToParent(date: UserDates?) {
        self.showGamesResult(userDates: date, userDate: nil)
     }
     
@@ -41,9 +41,24 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     
     func creatErrorAlert(_ error: Error?){
         let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
+        
         alertController.addAction(UIAlertAction(title: "Ок", style: .default))
+        alertController.addAction(UIAlertAction(title: "Повторить", style: .default, handler:{[weak self] action in
+            self?.showGamesResult(userDates: nil, userDate: nil)
+        }))
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func configureRefreshControl(){
+        refreshControl.tintColor = UIColor.white
+        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
+        self.listOfGameResultsView?.listOfGameResultsTableView?.addSubview(refreshControl)
+    }
+    
+    @objc func refreshTableView(){
+        self.showGamesResult(userDates: nil, userDate: nil)
+        refreshControl.endRefreshing()
     }
 }
 

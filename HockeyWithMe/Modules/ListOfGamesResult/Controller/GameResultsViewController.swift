@@ -10,6 +10,8 @@ import UIKit
 
 class GameResultsViewController: UIViewController {
     @IBOutlet weak var listOfGameResultsView: ListOfGameView?
+    
+    lazy var refreshControl = UIRefreshControl()
     var createListOfResults = CreatListOfGameResults()
     var dateRangeDefinder = DateRangeDefinder()
     var listOfGameResultArray = [ShortResults](){
@@ -35,9 +37,11 @@ class GameResultsViewController: UIViewController {
         
         self.listOfGameResultsView?.viewLayout()
         showGamesResult(userDates: nil, userDate: nil)
+        configureRefreshControl()
         
 
     }
+    
     @IBAction func showOptions(_ sender: Any) {
         guard let popUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpVC") as? PopUpGameResultsViewController else {return}
         self.addChild(popUpVC)
