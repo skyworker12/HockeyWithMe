@@ -241,18 +241,21 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата с " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idS-cV-qb0">
-                                        <rect key="frame" x="8" y="66" width="97" height="30"/>
+                                        <rect key="frame" x="8" y="66" width="94" height="30"/>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="Z95-0V-2Cn"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="zyX-hc-MTv"/>
                                         </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата по" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-sR-Ugt">
-                                        <rect key="frame" x="113" y="66" width="95" height="30"/>
+                                        <rect key="frame" x="110" y="66" width="102" height="30"/>
                                         <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="OcJ-wU-wo8"/>
+                                        </constraints>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -306,16 +309,6 @@
                                         </items>
                                         <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </toolbar>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-7V-qco">
-                                        <rect key="frame" x="216" y="66" width="96" height="30"/>
-                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="96" id="mQS-KY-tel"/>
-                                        </constraints>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TzI-J3-PZ4">
                                         <rect key="frame" x="8" y="30" width="304" height="29"/>
                                         <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -329,13 +322,23 @@
                                         </segments>
                                         <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Дата" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6gT-7V-qco">
+                                        <rect key="frame" x="220" y="66" width="92" height="30"/>
+                                        <color key="backgroundColor" name="separatorColor" catalog="System" colorSpace="catalog"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="92" id="SEG-aN-7j4"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="6gT-7V-qco" firstAttribute="leading" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="8" id="2CJ-1A-T8C"/>
                                     <constraint firstItem="6gT-7V-qco" firstAttribute="top" secondItem="TzI-J3-PZ4" secondAttribute="bottom" constant="8" id="7S2-Ja-vvc"/>
                                     <constraint firstAttribute="trailing" secondItem="6gT-7V-qco" secondAttribute="trailing" constant="8" id="CbV-Om-tKC"/>
                                     <constraint firstItem="yv5-0D-dcE" firstAttribute="top" secondItem="Adg-sR-Ugt" secondAttribute="bottom" constant="9" id="FhY-W1-RKg"/>
-                                    <constraint firstItem="Adg-sR-Ugt" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="113" id="FrF-i4-yJA"/>
                                     <constraint firstAttribute="trailing" secondItem="yv5-0D-dcE" secondAttribute="trailing" constant="8" id="FyQ-zs-Zno"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="top" secondItem="4GD-gU-SMI" secondAttribute="top" id="GsH-Th-hz0"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="top" secondItem="1V5-qL-auH" secondAttribute="bottom" constant="8" id="IEV-YT-Hxe"/>
@@ -352,11 +355,11 @@
                                     <constraint firstItem="yv5-0D-dcE" firstAttribute="top" secondItem="6gT-7V-qco" secondAttribute="bottom" constant="9" id="ogY-2c-KW5"/>
                                     <constraint firstAttribute="trailing" secondItem="dCj-Qn-FDf" secondAttribute="trailing" constant="8" id="oqC-4V-3nQ"/>
                                     <constraint firstAttribute="trailing" secondItem="pY8-0D-v9l" secondAttribute="trailing" constant="8" id="p7j-Fm-hYg"/>
+                                    <constraint firstItem="Adg-sR-Ugt" firstAttribute="leading" secondItem="idS-cV-qb0" secondAttribute="trailing" constant="8" id="vyY-Nz-X7g"/>
                                     <constraint firstItem="TzI-J3-PZ4" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="wDj-84-sKc"/>
                                     <constraint firstItem="pY8-0D-v9l" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="xmE-ZR-G3x"/>
                                     <constraint firstItem="idS-cV-qb0" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="yRq-bM-OiY"/>
                                     <constraint firstItem="1V5-qL-auH" firstAttribute="leading" secondItem="4GD-gU-SMI" secondAttribute="leading" constant="8" id="yWW-qu-oCc"/>
-                                    <constraint firstAttribute="trailing" secondItem="Adg-sR-Ugt" secondAttribute="trailing" constant="112" id="yeW-uU-2Bl"/>
                                 </constraints>
                             </view>
                         </subviews>

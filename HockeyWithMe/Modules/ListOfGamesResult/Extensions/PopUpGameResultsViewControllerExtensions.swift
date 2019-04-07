@@ -16,6 +16,7 @@ extension PopUpGameResultsViewController{
         guard let oneDate = popUpGameResultsView?.oneDateTextField.text else {return}
         guard let view = popUpGameResultsView else {return}
         let userDate = (startDate, endDate, oneDate)
+        
         switch userDate{
         case ("","", ""):
             view.editTextField(textField: view.startDateTextField, textFieldValue: .none)

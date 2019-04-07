@@ -34,8 +34,7 @@ class PopUpGamesResultsView: UIView {
     func editTextField(textField: UITextField, textFieldValue: TextFieldValue){
         switch textFieldValue{
         case .none:
-            textField.layer.borderWidth = 1
-            textField.layer.borderColor = UIColor.red.cgColor
+            textField.shake()
         case .some:
             textField.layer.borderWidth = 0
         }

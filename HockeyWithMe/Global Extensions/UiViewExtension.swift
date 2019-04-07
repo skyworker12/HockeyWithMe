@@ -18,6 +18,7 @@ extension UIView{
         }, completion: nil)
         
     }
+    
     func animHide(){
         UIView.animate(withDuration: 0.15, delay: 0, options: [.curveLinear],
                        animations: {
@@ -28,4 +29,23 @@ extension UIView{
             self.removeFromSuperview()
         })
     }
+    
+    func shake(){
+        let propertyAnimator = UIViewPropertyAnimator(duration: 0.5, dampingRatio: 0.3, animations: {
+            self.layer.borderColor = UIColor.red.cgColor
+            self.layer.borderWidth = 1
+            self.transform = CGAffineTransform(translationX: 10, y: 0)
+        })
+        
+        propertyAnimator.addAnimations({
+            self.transform = CGAffineTransform(translationX: 0, y: 0)
+        }, delayFactor: 0.2)
+        
+        propertyAnimator.addCompletion { (_) in
+            self.layer.borderWidth = 0
+        }
+        
+        propertyAnimator.startAnimation()
+    }
+    
 }

@@ -21,24 +21,28 @@ class GameResultsViewController: UIViewController {
                 view.listOfGameResultsTableView?.delegate = self
                 view.listOfGameResultsTableView?.dataSource = self
                 view.listOfGameResultsTableView?.reloadData()
-                view.changeDateLabel(self.dateRangeDefinder.defineDateRange(self.listOfGameResultArray))
                 view.showTableView()
+                view.changeDateLabel(self.dateRangeDefinder.defineDateRange(self.listOfGameResultArray))
+                self.checkRefreshControlStatus()
             }
         }
     }
     var downloadError: Error?{
         didSet{
-           creatErrorAlert(self.downloadError)
+            DispatchQueue.main.async {
+                self.creatErrorAlert(self.downloadError)
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.listOfGameResultsView?.viewLayout()
         showGamesResult(userDates: nil, userDate: nil)
         configureRefreshControl()
-        
+
 
     }
     

@@ -16,8 +16,10 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "GoToFullGameInfo") as! ListOfGamesResultsCell
+        
         cell.fillingCell(arrayWithData: [listOfGameResultArray[indexPath.row]])
         cell.customizeCell()
+        
         return cell
     }
         
@@ -26,7 +28,15 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
             if let error = error{
                 self?.downloadError = error
             }else if let data = data{
-                self?.listOfGameResultArray = data
+                
+                switch data.isEmpty{
+                case true:
+                    DispatchQueue.main.async {
+                        self?.createEmtyArrayAlert()
+                    }
+                case false:
+                    self?.listOfGameResultArray = data
+               }
             }
         })
     }
@@ -48,6 +58,19 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
         }))
         
         self.present(alertController, animated: true, completion: nil)
+        
+        checkRefreshControlStatus()
+
+    }
+    
+    private func createEmtyArrayAlert(){
+        let alertController = UIAlertController(title: "Упс", message: "Cегодня матчей нет :(", preferredStyle: .alert)
+        
+        alertController.addAction(UIAlertAction(title: "Понятно", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        checkRefreshControlStatus()
     }
     
     func configureRefreshControl(){
@@ -58,7 +81,12 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
     
     @objc func refreshTableView(){
         self.showGamesResult(userDates: nil, userDate: nil)
-        refreshControl.endRefreshing()
+    }
+    
+     func checkRefreshControlStatus(){
+        if self.refreshControl.isRefreshing{
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 
