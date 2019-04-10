@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class DateRangeDefinder{
+class DateRangeDefinder: DefineDate{
     func defineDateRange(_ array: [ShortResults]) -> UserDates{
         var dateRange: UserDates
         var datesSet = Set<String>()

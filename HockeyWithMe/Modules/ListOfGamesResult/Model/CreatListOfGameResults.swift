@@ -29,7 +29,8 @@ extension CreatListOfGameResults{
             let container = DateAndGamesStruct(date: i.date, games: i.games)
             
             for item in container.games{
-                let containerTwo = ShortResults(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score)
+                
+                let containerTwo = ShortResults(gamePk: item.gamePk, gameDate: item.gameDate, gameStatus: item.status.abstractGameState, homeTeamName: item.teams.home.team.name, homeTeamScore: item.teams.home.score, homeTeamRecord: (item.teams.home.leagueRecord.wins, item.teams.home.leagueRecord.losses, item.teams.home.leagueRecord.ot), awayTeamName: item.teams.away.team.name, awayTeamScore: item.teams.away.score, awayTeamRecord: (item.teams.away.leagueRecord.wins, item.teams.away.leagueRecord.losses, item.teams.away.leagueRecord.ot), gamePlace: item.venue.name)
                 
                 finalArray.append(containerTwo)
             }

@@ -8,9 +8,15 @@
 
 import Foundation
 import UIKit
+
 protocol ListOfGameResultsViewProtocol{
     var listOfGameResultsTableView: UITableView? {get set}
 }
+
 protocol CreatListOfGame{
     func creatListOfGame(userDates: UserDates?, userDate: String?,completion:@escaping ([ShortResults]?,Error?)->Void)
+}
+
+protocol DefineDate{
+    func defineDateRange(_ array: [ShortResults]) -> UserDates
 }

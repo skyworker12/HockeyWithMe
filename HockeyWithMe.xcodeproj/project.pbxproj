@@ -12,6 +12,9 @@
 		DDB5A6E122495FB000E26C14 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E022495FB000E26C14 /* StringExtensions.swift */; };
 		DDB5A6E3224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E2224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift */; };
 		DDB5A6E62249702000E26C14 /* ExtendedOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB5A6E52249702000E26C14 /* ExtendedOptions.swift */; };
+		DDDDA306225B08C800B6304A /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDDDA305225B08C800B6304A /* GameStoryboard.storyboard */; };
+		DDDDA30B225B09D500B6304A /* GameInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDA30A225B09D500B6304A /* GameInfoViewController.swift */; };
+		DDDDA30D225B09F500B6304A /* GameInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDDA30C225B09F500B6304A /* GameInfoView.swift */; };
 		DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift */; };
 		DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433C220D55A400A73247 /* AppDelegate.swift */; };
 		DDE7433F220D55A400A73247 /* GameResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7433E220D55A400A73247 /* GameResultsViewController.swift */; };
@@ -38,6 +41,9 @@
 		DDB5A6E022495FB000E26C14 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		DDB5A6E2224961EF00E26C14 /* ListOfGameResultsCellExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfGameResultsCellExtentions.swift; sourceTree = "<group>"; };
 		DDB5A6E52249702000E26C14 /* ExtendedOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedOptions.swift; sourceTree = "<group>"; };
+		DDDDA305225B08C800B6304A /* GameStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
+		DDDDA30A225B09D500B6304A /* GameInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoViewController.swift; sourceTree = "<group>"; };
+		DDDDA30C225B09F500B6304A /* GameInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfoView.swift; sourceTree = "<group>"; };
 		DDE4462E224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpGameResultsViewControllerExtensions.swift; sourceTree = "<group>"; };
 		DDE74339220D55A400A73247 /* HockeyWithMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HockeyWithMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7433C220D55A400A73247 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,40 @@
 				DD99A5FB22528F7A00B91568 /* PopUpGameResult.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		DDDDA304225B088200B6304A /* GameFullInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDA305225B08C800B6304A /* GameStoryboard.storyboard */,
+				DDDDA309225B093200B6304A /* Model */,
+				DDDDA307225B091300B6304A /* Controller */,
+				DDDDA308225B092900B6304A /* View */,
+			);
+			path = GameFullInfo;
+			sourceTree = "<group>";
+		};
+		DDDDA307225B091300B6304A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDA30A225B09D500B6304A /* GameInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDDDA308225B092900B6304A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DDDDA30C225B09F500B6304A /* GameInfoView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDDDA309225B093200B6304A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		DDE44630224037D9002A409E /* Global Extensions */ = {
@@ -210,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				DDE74351220D583500A73247 /* ListOfGamesResult */,
+				DDDDA304225B088200B6304A /* GameFullInfo */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -275,6 +316,7 @@
 				DDE7434A220D55A800A73247 /* LaunchScreen.storyboard in Resources */,
 				DDE74347220D55A800A73247 /* Assets.xcassets in Resources */,
 				DDE74342220D55A400A73247 /* Main.storyboard in Resources */,
+				DDDDA306225B08C800B6304A /* GameStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +333,7 @@
 				DDE74345220D55A400A73247 /* HockeyWithMe.xcdatamodeld in Sources */,
 				DDE7433F220D55A400A73247 /* GameResultsViewController.swift in Sources */,
 				DDE7433D220D55A400A73247 /* AppDelegate.swift in Sources */,
+				DDDDA30B225B09D500B6304A /* GameInfoViewController.swift in Sources */,
 				DDE4462F224034D3002A409E /* PopUpGameResultsViewControllerExtensions.swift in Sources */,
 				DD99A5FC22528F7A00B91568 /* PopUpGameResult.swift in Sources */,
 				DDE7436A221FCA7400A73247 /* ListOfGameResultsViewProtocol.swift in Sources */,
@@ -302,6 +345,7 @@
 				DDE743CA223A1F4400A73247 /* PopUpGamesResultsView.swift in Sources */,
 				DDE743CC223A207F00A73247 /* PopUpGameResultsViewController.swift in Sources */,
 				DDE7435B22114EE500A73247 /* GamesResult.swift in Sources */,
+				DDDDA30D225B09F500B6304A /* GameInfoView.swift in Sources */,
 				DDE7436C2227B60300A73247 /* CreatListOfGameResults.swift in Sources */,
 				DDE7436E2227B66F00A73247 /* GameResultsViewControllerExtensions.swift in Sources */,
 				DDB5A6E62249702000E26C14 /* ExtendedOptions.swift in Sources */,

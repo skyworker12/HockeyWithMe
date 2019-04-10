@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource, ExtendedOptionsDelegate{
+extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfGameResultArray.count
@@ -22,71 +22,31 @@ extension GameResultsViewController: UITableViewDelegate, UITableViewDataSource,
         
         return cell
     }
-        
-    func showGamesResult(userDates: UserDates?, userDate: String?){
-        self.createListOfResults.creatListOfGame(userDates: userDates, userDate: userDate, completion: {[weak self](data, error) in
-            if let error = error{
-                self?.downloadError = error
-            }else if let data = data{
-                
-                switch data.isEmpty{
-                case true:
-                    DispatchQueue.main.async {
-                        self?.createEmtyArrayAlert()
-                    }
-                case false:
-                    self?.listOfGameResultArray = data
-               }
-            }
-        })
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let gameInfoVC = UIStoryboard(name: "GameStoryboard", bundle: nil).instantiateViewController(withIdentifier: "GameInfo") as? GameInfoViewController else {return}
+        self.present(gameInfoVC, animated: true, completion: nil)
     }
-   
+    
+}
+
+extension GameResultsViewController: ExtendedOptionsDelegate{
+    
     func sendChosenDatesToParent(date: UserDates?) {
-       self.showGamesResult(userDates: date, userDate: nil)
+        self.showGamesResult(userDates: date, userDate: nil)
+        
+        self.listOfGameResultsView?.hideTableView()
+        
+        self.listOfGameResultsView?.showActionIndicator()
     }
     
     func sendChosenOneDateToParent(date: String?){
         self.showGamesResult(userDates: nil, userDate: date)
-    }
-    
-    func creatErrorAlert(_ error: Error?){
-        let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
         
-        alertController.addAction(UIAlertAction(title: "Ок", style: .default))
-        alertController.addAction(UIAlertAction(title: "Повторить", style: .default, handler:{[weak self] action in
-            self?.showGamesResult(userDates: nil, userDate: nil)
-        }))
+        self.listOfGameResultsView?.hideTableView()
         
-        self.present(alertController, animated: true, completion: nil)
+        self.listOfGameResultsView?.showActionIndicator()
         
-        checkRefreshControlStatus()
-
-    }
-    
-    private func createEmtyArrayAlert(){
-        let alertController = UIAlertController(title: "Упс", message: "Cегодня матчей нет :(", preferredStyle: .alert)
-        
-        alertController.addAction(UIAlertAction(title: "Понятно", style: .default))
-        
-        self.present(alertController, animated: true, completion: nil)
-        
-        checkRefreshControlStatus()
-    }
-    
-    func configureRefreshControl(){
-        refreshControl.tintColor = UIColor.white
-        refreshControl.addTarget(self, action: #selector(refreshTableView), for: .valueChanged)
-        self.listOfGameResultsView?.listOfGameResultsTableView?.addSubview(refreshControl)
-    }
-    
-    @objc func refreshTableView(){
-        self.showGamesResult(userDates: nil, userDate: nil)
-    }
-    
-     func checkRefreshControlStatus(){
-        if self.refreshControl.isRefreshing{
-            self.refreshControl.endRefreshing()
-        }
     }
 }
 

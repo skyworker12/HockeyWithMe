@@ -73,8 +73,11 @@ struct ShortResults{
      let gameStatus: String
      let homeTeamName: String
      let homeTeamScore: Int
+     let homeTeamRecord: (Int, Int, Int)
      let awayTeamName: String
      let awayTeamScore: Int
+     let awayTeamRecord: (Int, Int, Int)
+     let gamePlace: String
 }
 
 struct UserDates{
