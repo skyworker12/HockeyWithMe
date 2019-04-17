@@ -7,6 +7,11 @@
 //
 
 import Foundation
+
+struct DateAndGamesStruct{
+     let date: String
+     let games: [Game]
+}
 struct GameResults: Codable {
     let copyright: String
     let totalItems, totalEvents, totalGames, totalMatches: Int
@@ -23,7 +28,7 @@ struct DateElement: Codable {
 struct Game: Codable {
     let gamePk: Int
     let link, gameType, season: String
-    var gameDate: String
+    let gameDate: String
     let status: Status
     let teams: Teams
     let venue: Venue
@@ -50,7 +55,7 @@ struct Away: Codable {
 }
 
 struct LeagueRecord: Codable {
-    let wins, losses, ot: Int
+    let wins, losses: Int
     let type: TypeEnum
 }
 
@@ -62,21 +67,17 @@ struct Venue: Codable {
     let id: Int?
     let name, link: String
 }
-
-struct DateAndGamesStruct{
-     let date: String
-     let games: [Game]
-}
+ 
 struct ShortResults{
      let gamePk: Int
      var gameDate: String
      let gameStatus: String
      let homeTeamName: String
      let homeTeamScore: Int
-     let homeTeamRecord: (Int, Int, Int)
+     let homeTeamRecord: (Int, Int)
      let awayTeamName: String
      let awayTeamScore: Int
-     let awayTeamRecord: (Int, Int, Int)
+     let awayTeamRecord: (Int, Int)
      let gamePlace: String
 }
 
@@ -84,3 +85,4 @@ struct UserDates{
     let startDate: String
     let endDate: String
 }
+

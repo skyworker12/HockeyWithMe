@@ -24,9 +24,11 @@ class ListOfGameView: UIView, ListOfGameResultsViewProtocol {
         self.aboutDatesView?.layer.borderColor = UIColor.white.cgColor
         self.configureActionIndicator()
     }
+    
     func changeDateLabel(_ dates: UserDates){
         self.gamesResultDateLabel?.text = ("\(dates.startDate) - \(dates.endDate)")
     }
+    
     func showTableView() {
         self.listOfGameResultsTableView?.isHidden = false
     }
@@ -50,6 +52,7 @@ class ListOfGameView: UIView, ListOfGameResultsViewProtocol {
         actionIndicator.hidesWhenStopped = true
         actionIndicator.style =
             UIActivityIndicatorView.Style.whiteLarge
+        
         self.addSubview(actionIndicator)
     }
 }

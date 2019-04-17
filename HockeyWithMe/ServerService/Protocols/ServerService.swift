@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 protocol DownoloadGamesResult: class{
     func downloadGamesResult(dates: UserDates?, date: String?, completion:@escaping (GameResults?,Error?)->Void)
 }

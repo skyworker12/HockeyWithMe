@@ -10,7 +10,14 @@ import UIKit
 
 class GameInfoViewController: UIViewController {
 
+    @IBOutlet var gameInfoView: GameInfoView!
+    
+    var gameShortInfoArray = [ShortResults]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.gameInfoView.fillInfo(self.gameShortInfoArray)
+
     }
 }

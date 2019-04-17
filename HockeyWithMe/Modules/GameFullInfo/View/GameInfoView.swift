@@ -11,8 +11,6 @@ import UIKit
 class GameInfoView: UIView {
     @IBOutlet weak var homeTeamNameLabel: UILabel!
     @IBOutlet weak var awayTeamNameLabel: UILabel!
-    @IBOutlet weak var homeTeamRecord: UILabel!
-    @IBOutlet weak var awayTeamLabel: UILabel!
     @IBOutlet weak var gameStatusLabel: UILabel!
     @IBOutlet weak var gameDateLabel: UILabel!
     @IBOutlet weak var gamePlaceLabel: UILabel!
@@ -20,4 +18,15 @@ class GameInfoView: UIView {
     @IBOutlet weak var awayTeamLogo: UIImageView!
     @IBOutlet weak var homeTeamScore: UILabel!
     @IBOutlet weak var awayTeamScore: UILabel!
+    
+    func fillInfo(_ array: [ShortResults]){
+        self.homeTeamNameLabel.text = array[0].homeTeamName
+        self.awayTeamNameLabel.text = array[0].awayTeamName
+        self.homeTeamScore.text = String(array[0].homeTeamScore)
+        self.awayTeamScore.text = String(array[0].awayTeamScore)
+        self.gameDateLabel.text = array[0].gameDate
+        self.gameStatusLabel.text = array[0].gameStatus
+        self.gamePlaceLabel.text = array[0].gamePlace
+    }
+
 }

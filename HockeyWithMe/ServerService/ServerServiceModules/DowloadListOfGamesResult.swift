@@ -23,6 +23,7 @@ class DowloadListOfGamesResult: DownoloadGamesResult{
                 }
               }catch let catchError{
                 print(catchError)
+                
               }
                 }).resume()
     }
